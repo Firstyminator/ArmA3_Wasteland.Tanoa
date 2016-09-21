@@ -4,8 +4,9 @@ NoEliteGaming is currently customizing this mission. Feedback is much appreciate
 
 Notes about my fork:
 
-* I use iniDB, initially provided by A3Wasteland
+* I use iniDB, initially provided by A3Wasteland (needed for all Saving - Keep that in mind)
 * All kudos to TOPArma and ArmaJunkies for the base of this missionfile! Love your work!
+* Credits also go to LoudNL, CRE4MPIE, AgentRev, and all others that do make this possible :)
 
 
 NoEliteGaming is a community that enjoys playing Arma and saw fit to modify our own A3Wasteland mission file.
