@@ -16,7 +16,7 @@ titleText ["_www.noelite.no_", "BLACK"];
 sleep 2;
 titleText ["_loading_", "BLACK"];
 sleep 5;
-titleText ["loading_complete_", "BLACK IN", 15];
+titleText ["loading_complete_", "BLACK IN", 10];
 private ["_messages", "_timeout"];
 
 _messages = [
