@@ -11,7 +11,6 @@
 #define hud_vehicle_idc 3601
 #define hud_activity_icon_idc 3602
 #define hud_activity_textbox_idc 3603
-#define hud_server_idc 3604
 
 scriptName "playerHud";
 
@@ -145,6 +144,7 @@ while {true} do
 	// Icons in bottom right
 
 	_strArray = [];
+/*	
 
 	if (_atmEnabled) then {
 		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\suatmm_icon.paa'/>", [player getVariable ["bmoney", 0]] call fn_numbersText];
@@ -163,6 +163,7 @@ while {true} do
 
 	_strArray pushBack format ["<t color='%1'>%2</t> <img size='0.7' image='client\icons\health.paa'/>", _healthTextColor, _health];
 
+*/	
 	_str = "";
 
 	{ _str = format ["%1%2<br/>", _str, _x] } forEach _strArray;

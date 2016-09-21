@@ -97,6 +97,7 @@ if (isServer) then
 if (hasInterface || isServer) then
 {
 	//init 3rd Party Scripts
+	[] execVM "addons\statusBar\statusbar.sqf"};
 	[] execVM "addons\parking\functions.sqf";
 	[] execVM "addons\storage\functions.sqf";
 	[] execVM "addons\vactions\functions.sqf";
