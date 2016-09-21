@@ -29,5 +29,8 @@ APOC_AA_SupOptions =
 //	["DLC LMGs","airdrop_DLC_LMGs",45000,"supply"],
 	["Food","Land_Sacks_goods_F",2000,"picnic"],
 	["Water","Land_BarrelWater_F",2000,"picnic"],
-	["Base Building Start","Land_Pod_Heli_Transport_04_box_F",18000,"base"]
+	["Base Building Start","Land_Pod_Heli_Transport_04_box_F",18000,"base"],
+	["Base in a Box (Small)", "Land_CargoBox_V1_F", 50000, "base"],
+	["Base in a Box (Medium)", "Land_Cargo20_yellow_F", 100000, "base"],
+	["Base in a Box (Large)", "Land_Cargo40_white_F", 150000, "base"]
 ];

@@ -193,7 +193,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 
 			clearBackpackCargoGlobal _object;
 
-			// this switch is only there at aj mission - removed in vanilla a3w
+			// this switch is only there at our mission - removed in vanilla a3w
 			switch (true) do
 			{			
 				case ({_object isKindOf _x} count ["Land_Pod_Heli_Transport_04_box_F"] > 0):
@@ -202,9 +202,24 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					//Attention: Dont forget to modify the APOC_srv_startAirdrop.sqf, here you can change the store content only NOT the airdrop content
 				};
 				
+				case ({_object isKindOf _x} count ["Land_CargoBox_V1_F"] > 0):
+				{
+						[_object, [["Land_Canal_Wall_Stairs_F", 2],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrier_3_F", 4],["Land_Canal_WallSmall_10m_F", 6],["Land_LampShabby_F", 10], ["Land_RampConcrete_F",1],["Land_Crash_barrier_F",4],["B_HMG_01_high_F",1]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+				};
+				
+				case ({_object isKindOf _x} count ["Land_Cargo20_yellow_F"] > 0):
+				{
+						[_object, ["Land_Cargo_Tower_V1_F", ["Land_Canal_Wall_Stairs_F", 4],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrierWall6_F", 4],["Land_Canal_WallSmall_10m_F", 10],["Land_LampShabby_F", 10], ["Land_RampConcreteHigh_F",2], ["Land_RampConcrete_F", 2],["Land_Crash_barrier_F",6],["B_HMG_01_high_F",2]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+				};
+				
+				case ({_object isKindOf _x} count ["Land_Cargo40_white_F"] > 0):
+				{
+						[_object, [["Land_Cargo_Tower_V1_F",2],["Land_GH_Platform_F",10],["Land_Canal_Wall_Stairs_F", 10],["Land_BarGate_F", 4],["Land_Cargo_Patrol_V1_F", 4],["Land_HBarrierWall6_F", 10],["Land_Canal_WallSmall_10m_F", 20],["Land_LampHalogen_F", 10], ["Land_RampConcreteHigh_F",4], ["Land_RampConcrete_F", 4],["Land_Crash_barrier_F",6],["B_GMG_01_F",2],["B_static_AA_F",2],["B_static_AT_F",2],["B_Quadbike_01_F",4],["C_Heli_light_01_digital_F",1]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+				};
+				
 				case (_object isKindOf "FlagPole_F"):
 				{
-					_object setFlagTexture "client\images\flagTextures\AJ_Logo_2016_Staynex_1024x512.jpg";
+					_object setFlagTexture "client\images\flagTextures\noelitegaming.jpg";
 				};
                 
                 case (_object isKindOf "Land_Sacks_goods_F"):
