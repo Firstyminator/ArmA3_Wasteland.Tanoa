@@ -110,11 +110,10 @@ while {true} do
 	
 	//BEGIN WANOR
 	//_serverString = format ["<t color='#A0FFFFFF'>Server: [NO] Wasteland #1 Norway Tanoa</t>"];
-    _serverString = format ["<t color='#A0FFFFFF'>Server: [NORWAY]Wasteland Norway Tanoa</t>"];
-	_serverString = format ["%1<br/><t color='#A0FFFFFF'><br/>Website: noelite.no</t><br/><t color='#A0FFFFFF'>Facebook: NoEliteGaming</t>",_serverString];
+	_serverString = format ["<t color='#A0FFFFFF'><br/>Website: noelite.no</t><br/><t color='#A0FFFFFF'>Facebook: NoEliteGaming</t>",_serverString];
 	_hudServerTextbox ctrlSetStructuredText parseText _serverString;
 	_hudServerTextbox ctrlCommit 0;
-	//END AJ
+	//END WANOR
 
 	//Calculate Health 0 - 100
 	_health = ((1 - damage player) * 100) max 0;
@@ -183,7 +182,7 @@ while {true} do
 
 	if (isStreamFriendlyUIEnabled) then
 	{
-		_tempString = format ["<t color='#CCCCCCCC'>A3Wasteland Norway %1<br/>www.spectryx.no</t>", getText (configFile >> "CfgWorlds" >> worldName >> "description")];
+		_tempString = format ["<t color='#CCCCCCCC'>NoElite A3Wasteland Norway %1<br/>www.noelite.no</t>", getText (configFile >> "CfgWorlds" >> worldName >> "description")];
 		_yOffset = _yOffset + 0.08;
 	}
 	else
