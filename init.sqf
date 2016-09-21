@@ -112,6 +112,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 	[] execVM "addons\laptop\init.sqf";
 	[] execVM "addons\HvT\HvT.sqf";
+	[] execVM "addons\HvT\HvD.sqf";                       // High Value Drugrunner
 	[] execVM "addons\scripts\intro.sqf";                 // Welcome intro by Firsty
 };
 
