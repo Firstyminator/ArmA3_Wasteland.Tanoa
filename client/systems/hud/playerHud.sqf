@@ -11,6 +11,7 @@
 #define hud_vehicle_idc 3601
 #define hud_activity_icon_idc 3602
 #define hud_activity_textbox_idc 3603
+#define hud_server_idc 3604
 
 scriptName "playerHud";
 
@@ -107,13 +108,13 @@ while {true} do
 	_hudActivityTextbox = _ui displayCtrl hud_activity_textbox_idc;
 	_hudServerTextbox = _ui displayCtrl hud_server_idc;
 	
-	//BEGIN WANOR
+	//BEGIN NOELITE
 	//_serverString = format ["<t color='#A0FFFFFF'>Server: [NO] Wasteland #1 Norway Tanoa</t>"];
     _serverString = format ["<t color='#A0FFFFFF'>NoEliteGaming Wasteland Tanoa</t>"];
 	_serverString = format ["<t color='#A0FFFFFF'><br/>Website: noelite.no</t><br/><t color='#A0FFFFFF'>Facebook: NoEliteGaming</t>",_serverString];
 	_hudServerTextbox ctrlSetStructuredText parseText _serverString;
 	_hudServerTextbox ctrlCommit 0;
-	//END WANOR
+	//END NOELITE
 
 	//Calculate Health 0 - 100
 	_health = ((1 - damage player) * 100) max 0;
