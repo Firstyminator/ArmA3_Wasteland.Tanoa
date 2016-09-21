@@ -342,7 +342,7 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"Land_Pod_Heli_Transport_04_box_F",
 	"Land_CargoBox_V1_F",
 	"Land_Cargo20_yellow_F",
-	"Land_Cargo40_white_F"
+	"Land_Cargo40_white_F",
 	"Wheeled_APC_F",
 	"APC_Tracked_01_base_F",
 	"APC_Tracked_02_base_F",
