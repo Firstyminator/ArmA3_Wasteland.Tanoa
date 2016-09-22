@@ -90,6 +90,7 @@ if (_uid call isAdmin) then
 			    {
 	            	closeDialog 0;
 	                execVM "client\systems\adminPanel\loadDebugMenu.sqf";
+					
 			    };
 				case 11: //Object search menu
 			    {
@@ -134,9 +135,10 @@ if (_uid call isAdmin) then
 					closeDialog 0;
 					true spawn client_respawnDialog;
 				};
-				case 5: //Empty - was Proving Grounds
+				case 5: //Access Proving Grounds
 				{
 					closeDialog 0;
+					createDialog "balca_debug_main";
 				};
 				case 6: //Show server FPS function
 				{		
