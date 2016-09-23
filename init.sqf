@@ -111,20 +111,20 @@ if (hasInterface || isServer) then
 	[] execVM "addons\stickyCharges\init.sqf";
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 	[] execVM "addons\laptop\init.sqf";
-	[] execVM "addons\HvT\HvT.sqf";
+	[] execVM "addons\HvT\HvT.sqf";							// High Value Target
 	[] execVM "addons\HvT\HvD.sqf";                       // High Value Drugrunner
 	[] execVM "addons\scripts\intro.sqf";                 // Welcome intro by Firsty
 };
 
 // Remove line drawings from map
-(createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
-[
-	"!triggerActivated thisTrigger", 
-	"thisTrigger setTriggerTimeout [30,30,30,false]",
-	"{ 
-	_b = _x select [(count _x -1),1];
-	_bannedChannels = ['0','1','2']; 
-	if (markerShape _x == 'POLYLINE' && (_b in _bannedChannels)) then
-	{deleteMarker _x}
-	} forEach allMapMarkers"
-];
+//(createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
+//[
+//	"!triggerActivated thisTrigger", 
+//	"thisTrigger setTriggerTimeout [30,30,30,false]",
+//	"{ 
+//	_b = _x select [(count _x -1),1];
+//	_bannedChannels = ['0','1','2']; 
+//	if (markerShape _x == 'POLYLINE' && (_b in _bannedChannels)) then
+//	{deleteMarker _x}
+//	} forEach allMapMarkers"
+//];

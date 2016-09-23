@@ -17,6 +17,7 @@ config_items_syphon_hose_max = compileFinal "1";
 
 config_refuel_amount_default = compileFinal "0.25";
 config_refuel_amounts = compileFinal str
+
 [
 	["Kart_01_Base_F", 1],
 	["Quadbike_01_base_F", 0.5],
