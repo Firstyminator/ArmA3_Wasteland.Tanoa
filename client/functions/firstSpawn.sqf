@@ -9,7 +9,7 @@
 client_firstSpawn = true;
 
 //[] execVM "client\functions\welcomeMessage.sqf";
-[] execVM "addons\TOParmaInfo\loadTOParmaInfo.sqf";
+//[] execVM "addons\TOParmaInfo\loadTOParmaInfo.sqf";
 player addEventHandler ["Take",
 {
 	_vehicle = _this select 1;
