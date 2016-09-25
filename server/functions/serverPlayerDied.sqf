@@ -41,4 +41,14 @@ if (vehicle _unit != _unit) then
 	};
 };
 
+// Make NPCs drop Cash
+if (!isPlayer _unit) then
+{
+			_item = createVehicle ["Land_Money_F", getPosATL _unit, [], 1, "None"];
+			_item setDir random 360;
+			_item setVariable ["cmoney", 1 + floor random 2500, true];
+			_item setVariable ["owner", "world", true];
+
+};
+
 //if !(["G_Diving", goggles _unit] call fn_startsWith) then { removeGoggles _unit };
