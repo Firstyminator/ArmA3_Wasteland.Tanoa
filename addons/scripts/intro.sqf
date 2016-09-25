@@ -2,20 +2,19 @@
     Author: Firsty
     Copyright by Firsty (C) 2016
 */
-
-Sleep 1;
+sleep 1;
 playMusic  "NoEliteIntro";
-Sleep 10;
+sleep 10;
 titleText ["_noelite_gaming_presents_", "BLACK"];
-Sleep 2;
+sleep 2;
 titleText ["_a_a3_wasteland_tanoa_custom_edition", "BLACK"];
-Sleep 2;
+sleep 2;
 titleText ["_by_firsty_", "BLACK"];
-Sleep 2;´|
+sleep 2;
 titleText ["_www.noelite.no_", "BLACK"];
-Sleep 2;
+sleep 2;
 titleText ["_loading_", "BLACK"];
-Sleep 5;
+sleep 5;
 titleText ["loading_complete_", "BLACK IN", 10];
 private ["_messages", "_timeout"];
 
