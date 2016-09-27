@@ -25,7 +25,7 @@ class Header
 
 author="Firsty - Core by A3Wasteland.com";
 onLoadName = "A3Wasteland Norway Tanoa"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
-onLoadMission = "a3wasteland.com";
+onLoadMission = "A3Wasteland.com";
 overviewText = "Website: noelite.no Facebook: NoEliteGaming";
 overviewTextLocked = "";
 overviewPicture = "mapConfig\loading.jpg";
