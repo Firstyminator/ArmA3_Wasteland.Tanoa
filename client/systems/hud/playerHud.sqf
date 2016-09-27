@@ -11,7 +11,6 @@
 #define hud_vehicle_idc 3601
 #define hud_activity_icon_idc 3602
 #define hud_activity_textbox_idc 3603
-#define hud_server_idc 3604
 
 scriptName "playerHud";
 
@@ -108,13 +107,13 @@ while {true} do
 	_hudActivityTextbox = _ui displayCtrl hud_activity_textbox_idc;
 	_hudServerTextbox = _ui displayCtrl hud_server_idc;
 	
-	//BEGIN NOELITE
+	//NoElite Ad
 	//_serverString = format ["<t color='#A0FFFFFF'>Server: [NO] Wasteland #1 Norway Tanoa</t>"];
     _serverString = format ["<t color='#A0FFFFFF'>NoEliteGaming Wasteland Tanoa</t>"];
 	_serverString = format ["<t color='#A0FFFFFF'><br/>Website: noelite.no</t><br/><t color='#A0FFFFFF'>Facebook: NoEliteGaming</t>",_serverString];
 	_hudServerTextbox ctrlSetStructuredText parseText _serverString;
 	_hudServerTextbox ctrlCommit 0;
-	//END NOELITE
+	//NoElite Ad ending
 
 	//Calculate Health 0 - 100
 	_health = ((1 - damage player) * 100) max 0;
@@ -145,7 +144,7 @@ while {true} do
 	// Icons in bottom right
 
 	_strArray = [];
-/*	
+/*	Default Wasteland HUD Disabled | CRE4MPIE StatusBar Script
 
 	if (_atmEnabled) then {
 		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\suatmm_icon.paa'/>", [player getVariable ["bmoney", 0]] call fn_numbersText];
@@ -185,7 +184,7 @@ while {true} do
 
 	if (isStreamFriendlyUIEnabled) then
 	{
-		_tempString = format ["<t color='#CCCCCCCC'>NoElite A3Wasteland Norway %1<br/>www.noelite.no</t>", getText (configFile >> "CfgWorlds" >> worldName >> "description")];
+		_tempString = format ["<t color='#CCCCCCCC'>NoElite A3Wasteland %1<br/>www.noelite.no</t>", getText (configFile >> "CfgWorlds" >> worldName >> "description")];
 		_yOffset = _yOffset + 0.08;
 	}
 	else
