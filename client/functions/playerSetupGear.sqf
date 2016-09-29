@@ -148,6 +148,8 @@ switch (true) do
 };
 
 */
+//load supporter loadouts
+_this call supporters;
 
 if (_player == player) then
 {
