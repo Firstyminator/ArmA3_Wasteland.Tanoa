@@ -42,8 +42,6 @@ briefing = 0; // if 0, skip Continue button
 
 //Dialog includes
 
-#include "addons\paintshop\Halv_defines.hpp"
-#include "addons\paintshop\paintshop.hpp"
 #include "client\gui_base.hpp"
 #include "addons\R3F_LOG\desc_include.h"
 #include "client\systems\ui_toolkit.hpp"
@@ -81,6 +79,8 @@ briefing = 0; // if 0, skip Continue button
 #include "addons\vPin\dialog\vPin_mainMenu.hpp"
 #include "addons\AF_Keypad\AF_KP_defines.hpp"
 #include "addons\AF_Keypad\AF_KP_dialogs.hpp"
+#include "addons\UniformPainter\dialog\UniformPainter_mainMenu.hpp"
+#include "addons\VehiclePainter\dialog\VehiclePainter_mainMenu.hpp"
 
 class RscTitles
 {
