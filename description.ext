@@ -42,6 +42,8 @@ briefing = 0; // if 0, skip Continue button
 
 //Dialog includes
 
+#include "addons\paintshop\Halv_defines.hpp"
+#include "addons\paintshop\paintshop.hpp"
 #include "client\gui_base.hpp"
 #include "addons\R3F_LOG\desc_include.h"
 #include "client\systems\ui_toolkit.hpp"

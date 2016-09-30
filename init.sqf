@@ -114,6 +114,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\HvT\HvT.sqf";							// High Value Target
 	[] execVM "addons\HvT\HvD.sqf";                       // High Value Drugrunner
 	[] execVM "addons\scripts\intro.sqf";                 // Welcome intro by Firsty
+	[] execVM "addons\paintshop\paintshop.sqf";           // PaintShop by HalvHjearne
 };
 
 // Remove line drawings from map
