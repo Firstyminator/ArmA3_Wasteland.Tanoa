@@ -1,5 +1,5 @@
 // ******************************************************************************************
-// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2016 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Version: 1.0
 //	@file Name: UniformPainter_optionSelect.sqf
@@ -19,7 +19,7 @@ storePurchaseHandle = player spawn
 	disableSerialization;
 
 	//Initialize Values
-	_textureDir = "client\images\vehicleTextures";
+	_textureDir = "client\images\uniformTextures";
 	_playerMoney = player getVariable ["cmoney", 0];
 	
 	// Grab access to the controls
@@ -32,7 +32,7 @@ storePurchaseHandle = player spawn
 	
 	_uniformPainter =
 	{
-		_textureDir = "client\images\vehicleTextures";
+		_textureDir = "client\images\uniformTextures";
 		_paint = _this select 1;
 
 		_price = 500;
