@@ -117,14 +117,14 @@ if (hasInterface || isServer) then
 };
 
 // Remove line drawings from map
-//(createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
-//[
-//	"!triggerActivated thisTrigger", 
-//	"thisTrigger setTriggerTimeout [30,30,30,false]",
-//	"{ 
-//	_b = _x select [(count _x -1),1];
-//	_bannedChannels = ['0','1','2']; 
-//	if (markerShape _x == 'POLYLINE' && (_b in _bannedChannels)) then
-//	{deleteMarker _x}
-//	} forEach allMapMarkers"
-//];
+(createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
+[
+	"!triggerActivated thisTrigger", 
+	"thisTrigger setTriggerTimeout [30,30,30,false]",
+	"{ 
+	_b = _x select [(count _x -1),1];
+	_bannedChannels = ['0','1','2']; 
+	if (markerShape _x == 'POLYLINE' && (_b in _bannedChannels)) then
+	{deleteMarker _x}
+	} forEach allMapMarkers"
+];
