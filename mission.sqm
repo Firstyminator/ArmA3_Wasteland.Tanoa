@@ -124,8 +124,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="NoElite A3Wasteland Norway Tanoa";
-		overviewText="Custom A3Wasteland Tanoa by Firsty. Core developed by ArmaJunkies and A3Wasteland.com";
+		briefingName="NoElite A3Wasteland Tanoa";
+		overviewText="A3Wasteland Tanoa by Firsty. Core developed by ArmaJunkies and A3Wasteland.com";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
 		startWeather=0;
