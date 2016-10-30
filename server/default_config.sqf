@@ -23,8 +23,8 @@ A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
 A3W_startingMoney = 250;           // Amount of money that players start with
-A3W_survivalSystem = 1;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
-A3W_unlimitedStamina = 0;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
+A3W_survivalSystem = 0;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
+A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
 A3W_bleedingTime = 300;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
 A3W_headshotNoRevive = 0;          // Instant death on fatal headshot by enemy player with non-explosive ammo (0 = no, 1 = yes)
 
@@ -40,8 +40,8 @@ A3W_customUniformEnabled = 0;		// Enable/Disable Custom Uniforms
 A3W_tkAutoSwitchEnabled = 0;			// Enable/Disable Switch for team killers
 A3W_maxLockonDistance = 1000; 	// Max Lockon Distance with Missle
 APOC_coolDownTimer = 900;		// APOC Air Drop Cool Down Time
-BoS_coolDownTimer = 600;           // Baselocker hacking timer
-Safe_coolDownTimer = 600;          // Safe hacking timer
+BoS_coolDownTimer = 900;           // Baselocker hacking timer
+Safe_coolDownTimer = 900;          // Safe hacking timer
 A3W_maxSpawnBeacons = 2;		   // Maxmimum number of spawn beacons (0 = disabled)
 
 // Antihack settings
@@ -51,8 +51,8 @@ A3W_antiHackMinRecoil = 1.0;       // Mininum recoil coefficient enforced by the
 // Store settings
 A3W_showGunStoreStatus = 1;        // Show enemy and friendly presence at gunstores on map (0 = no, 1 = yes)
 A3W_gunStoreIntruderWarning = 1;   // Warn players in gunstore areas of enemy intruders (0 = no, 1 = yes)
-A3W_remoteBombStoreRadius = 75;    // Prevent players from placing any kind of explosive on the ground within this distance from any store (0 = disabled)
-A3W_poiObjLockDistance = 100;      // Prevent players from locking objects within this distance from points of interest (stores & mission spawns)
+A3W_remoteBombStoreRadius = 100;    // Prevent players from placing any kind of explosive on the ground within this distance from any store (0 = disabled)
+A3W_poiObjLockDistance = 250;      // Prevent players from locking objects within this distance from points of interest (stores & mission spawns)
 A3W_vehiclePurchaseCooldown = 60;  // Number of seconds to wait before allowing someone to purchase another vehicle, don't bother setting it too high because it can be bypassed by rejoining
 
 // ATM settings
@@ -147,7 +147,7 @@ A3W_essentialsSpawning = 0;        // If serverSpawning = 1, spawn essential ite
 
 // Loot settings
 A3W_buildingLootWeapons = 1;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)
-A3W_buildingLootSupplies = 0;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
+A3W_buildingLootSupplies = 1;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
 A3W_buildingLootChances = 25;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
 A3W_vehicleLoot = 2;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
 
@@ -155,7 +155,7 @@ A3W_vehicleLoot = 2;               // Level of loot added to vehicles (0 = none,
 A3W_territoryCaptureTime = 3*60;   // Time in seconds needed to capture a territory
 A3W_territoryPayroll = 1;          // Periodically reward sides and indie groups based on how many territories they own (0 = no, 1 = yes)
 A3W_payrollInterval = 10*60;       // Delay in seconds between each payroll
-A3W_payrollAmount = 400;           // Amount of money rewarded per territory on each payroll
+A3W_payrollAmount = 500;           // Amount of money rewarded per territory on each payroll
 A3W_territoryAllowed = [0,1,2,3,4,5,6,7,8,9]; //Territory Allowed (0:KAVALA,1:ALTISAIR,2:PYRGOS,3:SELANKANO,4:KORE,5:ZAROS,6:DOCKS,7:GHOST,8:ABDERA,9:PANOCHORI)
 
 // Mission settings

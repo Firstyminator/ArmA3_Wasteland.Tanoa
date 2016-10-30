@@ -24,7 +24,7 @@ _setupObjects =
 
 	_vehicleClass =
 	[
-		"B_Truck_01_covered_F",
+		"C_Truck_02_box_F",
 		"B_Truck_01_fuel_F",
 		"B_Truck_01_medical_F",
 		"B_Truck_01_Repair_F",
@@ -64,7 +64,8 @@ _failedExec =
 _successExec =
 {
 	// Mission completed
-	[_vehicle, 1] call A3W_fnc_setLockState; // Unlock
+	_vehicle lock 1;
+	_vehicle setVariable ["R3F_LOG_disabled", false, true];
 
 	_successHintMessage = "The truck has been captured, well done.";
 };

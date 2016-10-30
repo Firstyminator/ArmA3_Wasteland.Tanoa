@@ -24,15 +24,15 @@ _setupObjects =
 	_wreckPos = _missionPos vectorAdd ([[25 + random 20, 0, 0], random 360] call BIS_fnc_rotateVector2D);
 
 	// Class, Position, Fuel, Ammo, Damage, Special
-	_wreck = ["O_Heli_Light_02_unarmed_F", _wreckPos, 0, 0, 1] call createMissionVehicle;
+	_wreck = ["B_T_VTOL_01_infantry_F", _wreckPos, 0, 0, 1] call createMissionVehicle;
 
 	_box1 = createVehicle ["Box_NATO_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box1 setDir random 360;
-	[_box1, ["mission_USLaunchers", "mission_AJ_Gear1"] call BIS_fnc_selectRandom] call fn_refillbox;
+	[_box1, "mission_USSpecial"] call fn_refillbox;
 
 	_box2 = createVehicle ["Box_East_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box2 setDir random 360;
-	[_box2, ["mission_USSpecial", "mission_Main_A3snipers", "mission_AJ_Sniper1", "mission_AJ_Sniper2"] call BIS_fnc_selectRandom] call fn_refillbox;
+	[_box2, "mission_USLaunchers"] call fn_refillbox;
 
 	{ _x setVariable ["R3F_LOG_disabled", true, true] } forEach [_box1, _box2];
 
@@ -40,7 +40,7 @@ _setupObjects =
 	[_aiGroup, _missionPos, _nbUnits] call createCustomGroup;
 
 	_missionPicture = getText (configFile >> "CfgVehicles" >> typeOf _wreck >> "picture");
-	_missionHintText = "A helicopter has come down under enemy fire!";
+	_missionHintText = "A Blackfish has come down under enemy fire!";
 };
 
 _waitUntilMarkerPos = nil;
@@ -59,7 +59,7 @@ _successExec =
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 	deleteVehicle _wreck;
 
-	_successHintMessage = "The airwreck supplies have been collected, well done.";
+	_successHintMessage = "The Blackfish supplies have been collected, well done.";
 };
 
 _this call sideMissionProcessor;

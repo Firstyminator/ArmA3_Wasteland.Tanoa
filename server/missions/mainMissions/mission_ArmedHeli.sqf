@@ -15,13 +15,12 @@ _setupVars =
 {
 	_vehicleClass =
 	[
-		"B_Heli_Transport_01_F",		// Ghosthawk Black - Armed
-		//"B_Heli_Transport_01_camo_F",	// Ghosthawk Camo - Armed
-		"B_Heli_Transport_03_F",		// Huron Green - Armed
-		"B_Heli_Transport_03_black_F",	// Huron Black - Armed
-		"I_Heli_light_03_F",			// Hellcat - Armed
-		"O_Heli_Light_02_v2_F",			// Orca DAR - Armed
-		"B_Heli_Light_01_armed_F"		// Pawnee - Armed
+		"B_Heli_Light_01_armed_F",
+		"B_Heli_Transport_01_F",
+		"B_Heli_Attack_01_F",
+		"O_Heli_Light_02_F",
+		"O_Heli_Attack_02_F",
+		"I_Heli_light_03_F"
 	] call BIS_fnc_selectRandom;
 
 	_missionType = "Armed Helicopter";

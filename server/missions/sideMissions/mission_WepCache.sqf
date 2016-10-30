@@ -9,11 +9,11 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf"
 
-private ["_nbUnits", "_box1", "_box2"];
+private ["_nbUnits", "_box1", "_box2", "_wreck", "_wreckPos", "_Boxes1", "_currBox1"];
 
 _setupVars =
 {
-	_missionType = "Aircraft Wreck";
+	_missionType = "Weapon Cache";
 	_locationsArray = [ForestMissionMarkers, MissionSpawnMarkers] select (ForestMissionMarkers isEqualTo []);
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };
@@ -21,20 +21,27 @@ _setupVars =
 _setupObjects =
 {
 	_missionPos = markerPos _missionLocation;
+	_wreckPos = _missionPos vectorAdd ([[25 + random 20, 0, 0], random 360] call BIS_fnc_rotateVector2D);
 
-	_box1 = createVehicle ["Box_NATO_Wps_F", _missionPos, [], 5, "None"];
+	// Class, Position, Fuel, Ammo, Damage, Special
+	_wreck = ["O_G_Van_01_transport_F", _wreckPos, 0, 0, 1] call createMissionVehicle;
+	
+	_Boxes1 = ["Box_IND_Wps_F","Box_East_Wps_F","Box_NATO_Wps_F","Box_NATO_AmmoOrd_F","Box_NATO_Grenades_F","Box_East_WpsLaunch_F","Box_NATO_WpsLaunch_F","Box_East_WpsSpecial_F","Box_NATO_WpsSpecial_F"];    
+	_currBox1 = _Boxes1 call BIS_fnc_selectRandom;
+	_box1 = createVehicle [_currBox1, _missionPos, [], 2, "None"];
 	_box1 setDir random 360;
-	[_box1, ["mission_USSpecial", "mission_Main_A3snipers", "mission_AJ_Sniper1", "mission_AJ_Sniper2"] call BIS_fnc_selectRandom] call fn_refillbox;
+	
 
 	_box2 = createVehicle ["Box_East_Wps_F", _missionPos, [], 5, "None"];
 	_box2 setDir random 360;
-	[_box2, ["mission_USLaunchers", "mission_AJ_Gear1"] call BIS_fnc_selectRandom] call fn_refillbox;
+	[_box2, "mission_USLaunchers"] call fn_refillbox;
 
 	{ _x setVariable ["R3F_LOG_disabled", true, true] } forEach [_box1, _box2];
 
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup, _missionPos, _nbUnits] call createCustomGroup;
 
+	_missionPicture = getText (configFile >> "CfgVehicles" >> typeOf _wreck >> "picture");
 	_missionHintText = "A weapon cache has been spotted near the marker.";
 };
 
@@ -52,8 +59,9 @@ _successExec =
 {
 	// Mission completed
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
-
-	_successHintMessage = "The airwreck supplies have been collected, well done.";
+	deleteVehicle _wreck;
+	
+	_successHintMessage = "The guards of the weapon cache has been killed. Good job! Save the crates!";
 };
 
 _this call sideMissionProcessor;

@@ -20,10 +20,10 @@ _setupObjects =
 	_missionPos = markerPos _missionLocation;
 
 	_box1 = createVehicle ["Box_NATO_Wps_F", _missionPos, [], 5, "None"];
-	[_box1, ["mission_USSpecial", "mission_Main_A3snipers", "mission_AJ_Sniper1", "mission_AJ_Sniper2"] call BIS_fnc_selectRandom] call fn_refillbox;
+	[_box1, "mission_USSpecial"] call fn_refillbox;
 
 	_box2 = createVehicle ["Box_East_Wps_F", _missionPos, [], 5, "None"];
-	[_box2, ["mission_USLaunchers", "mission_AJ_Gear1"] call BIS_fnc_selectRandom] call fn_refillbox;
+	[_box2, "mission_USLaunchers"] call fn_refillbox;
 
 	{
 		_boxPos = getPosASL _x;
@@ -36,7 +36,7 @@ _setupObjects =
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup, _missionPos] call createSmallDivers;
 
-	_missionHintText = "Sunken supplies have been spotted in the ocean near the marker, and are heavily guarded. Diving gear and an underwater weapon are recommended.";
+	_missionHintText = "<br/>Sunken supplies have been spotted in the ocean near the marker, and are heavily guarded. Diving gear and an underwater weapon are recommended.";
 };
 
 _waitUntilMarkerPos = nil;

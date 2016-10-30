@@ -23,14 +23,14 @@ _setupObjects =
 	switch (true) do
 	{
 		// GMG MRAPs
-		case ({ _vehicle isKindOf _x } count ["MRAP_01_gmg_base_F","MRAP_02_gmg_base_F","MRAP_03_gmg_base_F"] > 0):
+		/*case ({ _vehicle isKindOf _x } count ["MRAP_01_gmg_base_F","MRAP_02_gmg_base_F","MRAP_03_gmg_base_F"] > 0):
 		{
 			_vehicle setVehicleAmmoDef 1;
 
 			// Reduce grenades to 50
 			_vehicle removeMagazines "96Rnd_40mm_G_belt";
 			_vehicle addMagazine ["96Rnd_40mm_G_belt", 50];
-		};//
+		};*/
 
 		// AMV-7 Marshall
 		case (_vehicle isKindOf "B_APC_Wheeled_01_cannon_F"):
@@ -189,7 +189,8 @@ _failedExec =
 _successExec =
 {
 	// Mission completed
-	[_vehicle, 1] call A3W_fnc_setLockState; // Unlock
+	_vehicle lock 1;
+	_vehicle setVariable ["R3F_LOG_disabled", false, true];
 
 	_successHintMessage = format ["The %1 has been captured, well done.", _vehicleName];
 };

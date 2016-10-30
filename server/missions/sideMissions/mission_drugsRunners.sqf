@@ -9,11 +9,11 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf";
 
-private ["_convoyVeh", "_veh1", "_veh2", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_drop_item", "_drugpilerandomizer", "_drugpile", "_explosivePos", "_explosive"];
+private ["_convoyVeh", "_veh1", "_veh2", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_drop_item", "_drugpilerandomizer", "_drugpile"];
 
 _setupVars =
 {
-	_missionType = "Drugs Runners";
+	_missionType = "Drugs n' Surf";
 	_locationsArray = nil;
 };
 
@@ -25,11 +25,11 @@ _setupObjects =
 	// pick the vehicles for the convoy
 	_convoyVeh = if (missionDifficultyHard) then
 	{
-		["C_Hatchback_01_sport_F"]
+		["C_Offroad_02_unarmed_F"]
 	}
 	else
 	{
-		["C_Hatchback_01_sport_F"]
+		["C_Offroad_02_unarmed_F"]
 	};
 
 	_veh1 = _convoyVeh select 0;
@@ -49,15 +49,18 @@ _setupObjects =
 		_vehicle setDir _direction;
 		_aiGroup addVehicle _vehicle;
 
-		_soldier = [_aiGroup, _position] call createRandomSoldier;
+		_soldier = [_aiGroup, _position] call createRandomSurfer;
 		_soldier moveInDriver _vehicle;
 
-		_soldier = [_aiGroup, _position] call createRandomSoldier;
+		_soldier = [_aiGroup, _position] call createRandomSurfer;
 		_soldier moveInCargo [_vehicle, 0];
+		
+		_vehicle addEventhandler ["HandleDamage", {0.75*(_this select 2)}];
+		_vehicle addEventhandler ["HandleDamage", {if (_this select 1 in ["wheel_1_1_steering","wheel_1_2_steering","wheel_2_1_steering","wheel_2_2_steering"]) then {0*(_this select 2)}}];
 
 		switch (true) do
 		{
-			case (_type isKindOf "C_Hatchback_01_sport_F"):
+			case (_type isKindOf "C_SUV_01_F"):
 			{
 				[_vehicle, "#(rgb,1,1,1)color(0.01,0.01,0.01,1)", [0]] call applyVehicleTexture; // Apply black color
 			};
@@ -82,8 +85,8 @@ _setupObjects =
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
 
-	_aiGroup setCombatMode "GREEN"; // BLUE = units will never fire
-	_aiGroup setBehaviour "CARELESS"; // units will try to stay on roads, not caring about finding any cover
+	_aiGroup setCombatMode "GREEN"; // units will never fire
+	_aiGroup setBehaviour "CARELESS"; // nits will try to stay on roads, not caring about finding any cover
 	_aiGroup setFormation "STAG COLUMN";
 
 	_speedMode = if (missionDifficultyHard) then { "FULL" } else { "FULL" };
@@ -106,7 +109,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _veh1 >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 
-	_missionHintText = format ["Some guys driving a <t color='%2'>%1</t> are moving drugs around Altis. Stop them quickly!", _vehicleName, sideMissionColor];
+	_missionHintText = format ["Two sunnyboys with a <t color='%2'>%1</t> are on their way to hit the perfect wave. Kick their asses back to Hawaii!", _vehicleName, sideMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -156,11 +159,7 @@ _successExec =
 	  [_item, _lastPos] call _drop_item;
 	};
 	
-	_explosivePos = getPosATL (_vehicles select 0);
-	_explosive = createMine ["SatchelCharge_F", _explosivePos, [], 0];
-	_explosive setDamage 1;
-
-	_successHintMessage = "You have stopped the drugs runners but they blew up their car! The drugs are yours to take!";
+	_successHintMessage = "Good job! The sunnyboys won't surf anymore. Save the drugs ..";
 };
 
 _this call sideMissionProcessor;

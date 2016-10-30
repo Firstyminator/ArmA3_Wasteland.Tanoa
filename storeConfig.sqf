@@ -896,7 +896,7 @@ genObjectsArray = compileFinal str
 	["Flag (NOELITE)", "FlagPole_F", 500, "object"],
 	["---BASE EQUIPMENT---", "none", 0, "object"],
 	["Base locker (PIN: 0000)", "Land_Device_assembled_F", 30000, "object"],
-	["Base door", "Land_PillboxWall_01_6m_F", 10000, "object"],
+	["Base door", "Land_Canal_WallSmall_10m_F", 10000, "object"],
 	["Base door key (PIN: 0000)", "Land_TripodScreen_01_dual_v1_F", 10000, "object"],
 	["Fuel Station", "Land_FuelStation_Feed_F", 10000, "object"],
 	["Food Sack", "Land_Sacks_goods_F", 1000],
@@ -1030,7 +1030,7 @@ landArray = compileFinal str
 	["HEMTT Fuel", "B_Truck_01_fuel_F", 9000, "vehicle"],
 	["HEMTT Medical", "B_Truck_01_medical_F", 10000, "vehicle"],
 	//["HEMTT Repair", "B_Truck_01_Repair_F", 12500, "vehicle"],			//Removed to avoid bugusing with default arma rearm/repair function
-	["HEMTT Resupply", "B_Truck_01_ammo_F", 12500, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
+	//["HEMTT Resupply", "B_Truck_01_ammo_F", 12500, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
 	
 	["Service Truck", "O_Truck_03_device_F", 5000, "vehicle"],
 	["Tempest Transport", "O_Truck_03_transport_F", 6000, "vehicle"],
@@ -1038,14 +1038,14 @@ landArray = compileFinal str
 	["Tempest Fuel", "O_Truck_03_fuel_F", 9000, "vehicle"],
 	["Tempest Medical", "O_Truck_03_medical_F", 10000, "vehicle"],
 	//["Tempest Repair", "O_Truck_03_repair_F", 12500, "vehicle"],			//Removed to avoid bugusing with default arma rearm/repair function
-	["Tempest Resupply", "O_Truck_03_ammo_F", 12500, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
+	//["Tempest Resupply", "O_Truck_03_ammo_F", 12500, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
 	
 	["Zamak Transport", "I_Truck_02_transport_F", 4000, "vehicle"],
 	["Zamak Covered", "I_Truck_02_covered_F", 5000, "vehicle"],
 	["Zamak Fuel", "I_Truck_02_fuel_F", 7500, "vehicle"],
 	["Zamak Medical", "I_Truck_02_medical_F", 9000, "vehicle"],
 	//["Zamak Repair", "I_Truck_02_box_F", 10000, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
-	["Zamak Resupply", "I_Truck_02_ammo_F", 12500, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
+	//["Zamak Resupply", "I_Truck_02_ammo_F", 12500, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
     
 	["UGV Stomper (NATO)", "B_UGV_01_F", 10000, "vehicle"],
 	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 100000, "vehicle"],
@@ -1390,17 +1390,18 @@ colorsArray = compileFinal str
 // ["Medical Kit", "medkits", localize "STR_WL_ShopDescriptions_MedKit", "client\icons\medkit.paa", 400, 200],  // not needed since there are First Ait Kits
 customPlayerItems = compileFinal str
 [
-	["Water Bottle", "water", localize "STR_WL_ShopDescriptions_Water", "client\icons\waterbottle.paa", 30, 15],
-	["Canned Food", "cannedfood", localize "STR_WL_ShopDescriptions_CanFood", "client\icons\cannedfood.paa", 30, 15],
+	//["Water Bottle", "water", localize "STR_WL_ShopDescriptions_Water", "client\icons\waterbottle.paa", 30, 15],
+	//["Canned Food", "cannedfood", localize "STR_WL_ShopDescriptions_CanFood", "client\icons\cannedfood.paa", 30, 15],
 	["Repair Kit", "repairkit", localize "STR_WL_ShopDescriptions_RepairKit", "client\icons\briefcase.paa", 500, 250],
 
 	["LSD", "lsd", localize "STR_WL_ShopDescriptions_LSD", "client\icons\lsd.paa", 12500, 6250],
 	["Marijuana", "marijuana", localize "STR_WL_ShopDescriptions_Marijuana", "client\icons\marijuana.paa", 10000, 5000],
 	["Cocaine", "cocaine", localize "STR_WL_ShopDescriptions_Cocaine", "client\icons\cocaine.paa", 14000, 7000],
 	["Heroin", "heroin", localize "STR_WL_ShopDescriptions_Heroin", "client\icons\heroin.paa", 15000, 7500],
-	
-	["Jerry Can (Full)", "jerrycanfull", localize "STR_WL_ShopDescriptions_fuelFull", "client\icons\jerrycan.paa", 150, 75],
-	["Jerry Can (Empty)", "jerrycanempty", localize "STR_WL_ShopDescriptions_fuelEmpty", "client\icons\jerrycan.paa", 50, 25],
+	["Crystal Meth", "meth", localize "STR_WL_ShopDescriptions_Meth", "client\icons\meth.paa", 500, 200],
+	["Crack", "crack", localize "STR_WL_ShopDescriptions_Crack", "client\icons\crack.paa", 500, 200],
+	//["Jerry Can (Full)", "jerrycanfull", localize "STR_WL_ShopDescriptions_fuelFull", "client\icons\jerrycan.paa", 150, 75],
+	//["Jerry Can (Empty)", "jerrycanempty", localize "STR_WL_ShopDescriptions_fuelEmpty", "client\icons\jerrycan.paa", 50, 25],
 	["Spawn Beacon", "spawnbeacon", localize "STR_WL_ShopDescriptions_spawnBeacon", "client\icons\spawnbeacon.paa", 9500, 750],
 	["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "client\icons\camonet.paa", 200, 100],
 	["Syphon Hose", "syphonhose", localize "STR_WL_ShopDescriptions_SyphonHose", "client\icons\syphonhose.paa", 200, 100],

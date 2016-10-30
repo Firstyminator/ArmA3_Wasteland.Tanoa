@@ -7,7 +7,7 @@
 //	@file Description: Door script
 
 private ["_doors"];
-_doors = (nearestObjects [player, ["Land_PillboxWall_01_6m_F"], 10]);
+_doors = (nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 10]);
 
 
 

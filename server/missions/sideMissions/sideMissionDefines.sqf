@@ -6,11 +6,11 @@
 //	@file Author: [404] Deadbeat, AgentRev
 //	@file Created: 08/12/2012 15:19
 
-// Side Mission Color = #4BC9B0 - Teal
+// Side Mission Color = #478A08 - Teal
 // Fail Mission Color = #FF1717 - Light red
 // Success Mission Color = #17FF41 - Light green
 
-#define sideMissionColor "#4BC9B0"
+#define sideMissionColor "#478A08"
 #define failMissionColor "#FF1717"
 #define successMissionColor "#17FF41"
 #define subTextColor "#FFFFFF"

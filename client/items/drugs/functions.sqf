@@ -215,3 +215,91 @@ drug_heroin_effects = { _this spawn {
 };};
 
 
+drug_crack_effects = { _this spawn {
+  private["_player", "_duration"];
+  _player = _this select 0;
+  _duration = _this select 1;
+
+  
+
+  private["_effect1","_effect2"];
+  _effect1 = ppEffectCreate ["RadialBlur",45];
+  _effect1 ppEffectEnable true;
+  
+  _effect2 = ppEffectCreate ["chromAberration",100];
+  _effect2 ppEffectEnable true;
+  
+  playMusic ["AmbientTrack01_F", 0];
+  _player enableFatigue true;
+  
+  private["_timeout"];
+  _timeout = time + _duration;
+  waitUntil {
+
+    _effect2 ppEffectAdjust [random 0.1,random 0.1,true];
+    _effect2 ppEffectCommit 3;
+	_player setFatigue 1;
+    
+    3 setFog (random 1);
+    if ((random 100) < 5) then {
+      waituntil {
+        addCamShake [random 10,random 1,random 3];
+        ppEffectCommitted _effect2
+      };
+    };
+    (time > _timeout)
+  };
+  
+  3 setFog 0;
+  playMusic "";
+  _player setFatigue 0;
+  _player enableFatigue false;
+  ppEffectDestroy _effect1;
+  ppEffectDestroy _effect2;
+};};
+
+
+drug_meth_effects = { _this spawn {
+  private["_player", "_duration"];
+  _player = _this select 0;
+  _duration = _this select 1;
+
+  
+
+  private["_effect1","_effect2"];
+  _effect1 = ppEffectCreate ["RadialBlur",40];
+  _effect1 ppEffectEnable true;
+  
+  _effect2 = ppEffectCreate ["chromAberration",455];
+  _effect2 ppEffectEnable true;
+  
+  playMusic ["AmbientTrack01b_F_EXP", 0];
+  _player enableFatigue true;
+  
+  private["_timeout"];
+  _timeout = time + _duration;
+  waitUntil {
+
+    _effect2 ppEffectAdjust [random 0.1,random 0.1,true];
+    _effect2 ppEffectCommit 3;
+	_player setFatigue 1;
+    
+    3 setFog (random 1);
+    if ((random 100) < 5) then {
+      waituntil {
+        addCamShake [random 10,random 1,random 3];
+        ppEffectCommitted _effect2
+      };
+    };
+    (time > _timeout)
+  };
+  
+  3 setFog 0;
+  playMusic "";
+  _player setFatigue 0;
+  _player enableFatigue false;
+  ppEffectDestroy _effect1;
+  ppEffectDestroy _effect2;
+};};
+
+

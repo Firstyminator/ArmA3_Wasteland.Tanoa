@@ -13,7 +13,7 @@ private ["_geoPos", "_geoCache", "_randomBox", "_randomCase", "_box1", "_para"];
 
 _setupVars =
 {
-	_missionType = "GeoCache";
+	_missionType = "Radio Hideout";
 	_locationsArray = MissionSpawnMarkers;
 };
 
@@ -23,7 +23,7 @@ _setupObjects =
 	_geoPos = _missionPos vectorAdd ([[25 + random 20, 0, 0], random 360] call BIS_fnc_rotateVector2D);	
 	_geoCache = createVehicle ["Land_SurvivalRadio_F",[(_geoPos select 0), (_geoPos select 1),0],[], 0, "NONE"];
 
-	_missionHintText = "a GeoCache has been marked on the map. There is a small object hidden near the marker. Find it and a reward will be delivered by air!";
+	_missionHintText = "<br/>There is a small object hidden near the marker. Find it and a reward will be delivered by air!<br/>Right. It's a bloody hidden radio!";
 };
 
 _ignoreAiDeaths = true;
@@ -44,10 +44,11 @@ _successExec =
 	{ deleteVehicle _x } forEach [_GeoCache];
 	
 	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers"] call BIS_fnc_selectRandom;
-	_randomCase = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F"] call BIS_fnc_selectRandom;
+	_randomCase = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F","Box_NATO_WpsSpecial_F","Box_East_WpsSpecial_F","Box_NATO_Ammo_F","Box_East_Ammo_F"] call BIS_fnc_selectRandom;
 	
 	_box1 = createVehicle [_randomCase,[(_geoPos select 0), (_geoPos select 1),200],[], 0, "NONE"];
 	_box1 setDir random 360;
+	_box1 allowdamage false;
 	[_box1, _randomBox] call fn_refillbox;
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];
 
@@ -71,7 +72,7 @@ _successExec =
 		uiSleep 0.1;
 	};
 	
-	_successHintMessage = "The GeoCache supplies have been delivered by parachute!";
+	_successHintMessage = "The radio was found and the supplies have been delivered by parachute!";
 };
 
 _this call sideMissionProcessor;
