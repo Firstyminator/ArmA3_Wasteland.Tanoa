@@ -25,48 +25,6 @@ while { true } do
 {
 	waitUntil {time > 0.1};
 
-	if (isNil "_cheatFlag") then
-	{
-		{
-			_unit = _x;
-			
-			if (owner _unit > _serverID) then
-			{
-			
-			//disable unit creation checks for zeusAdmins
-			_checkedplayer = [owner _unit] call findClientPlayer;
-			_checkedplayerUID = getPlayerUID _checkedplayer;	
-			_belongstoZeusAdmin =  _checkedplayerUID in call zeusAdmins;
-			
-			//error handling if zeusAdmins isn't defined for whatever reason
-			 if (isNil "_belongstoZeusAdmin") then {_belongstoZeusAdmin = false;};
-					
-			//set cheatflag 
-				if (alive _unit && !(typeOf _unit == "ModuleHQ_F") && !_belongstoZeusAdmin && !isPlayer _unit && {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "UAVPilot"}) then
-				{
-					_clientPlayer = [owner _unit] call findClientPlayer;
-
-					if (getText (configFile >> "CfgVehicles" >> typeOf _clientPlayer >> "simulation") == "headlessclient") exitWith {};
-
-					/*if (isNil "_cheatFlag") then
-					{
-						_cheatFlag = [];
-					};
-
-					_cheatFlag pushBack ["hacked unit", typeOf _unit, _clientPlayer];*/
-
-					for [{_i = 0}, {_i < 10 && vehicle _unit != _unit}, {_i = _i + 1}] do
-					{
-						moveOut _unit;
-						sleep 0.01;
-					};
-
-					deleteVehicle _unit;
-				};
-			};
-		} forEach (allUnits - allPlayers);
-	};
-
 	if (!isNil "_cheatFlag") then
 	{
 		{
