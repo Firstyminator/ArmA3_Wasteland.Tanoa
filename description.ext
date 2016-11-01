@@ -12,7 +12,7 @@ corpseRemovalMinTime = 30*60; //Minimal time in seconds a body stays in the scen
 corpseRemovalMaxTime = 30*60; //Maximal time in seconds after which a dead body is removed (can't stay longer) 
 wreckManagerMode = 1;   //Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
 wreckRemovalMinTime = 5*60;  //Minimal time in seconds a wreck stays in the scene (can't be removed sooner). 
-wreckRemovalMaxTime = 30*60; //Maximal time in seconds after which a wreck is removed (can't stay longer)
+wreckRemovalMaxTime = 10*60; //Maximal time in seconds after which a wreck is removed (can't stay longer)
 enableDebugConsole = 1;
 respawnDialog = 0; // do not enable this, otherwise the default scoreboard will overlap with the new one
 onPauseScript = "client\clientEvents\onPause.sqf";
@@ -20,7 +20,7 @@ class Header
 {
 	gameType=Sandbox;
 	minPlayers=1;
-	maxPlayers=146; // 144 players, 2 headless client
+	maxPlayers=42; // 144 players, 2 headless client
 };
 
 author="Firsty - Core by A3Wasteland.com";
@@ -66,7 +66,7 @@ briefing = 0; // if 0, skip Continue button
 #include "client\systems\playerMenu\dialog\respawn_dialog.hpp"
 #include "client\systems\playerMenu\dialog\teamkill_dialog.hpp"
 #include "addons\TOParmaInfo\dialog\TOParmaInfo_dialog.hpp"
-//#include "addons\proving_ground\PG_config.hpp"
+#include "addons\proving_ground\PG_config.hpp"
 #include "addons\outlw_magrepack\config.hpp"
 #include "addons\gui\gui.hpp"
 #include "addons\parking\list_simple_menu.hpp"
@@ -84,7 +84,7 @@ briefing = 0; // if 0, skip Continue button
 
 class RscTitles
 {
-//	#include "addons\proving_ground\PG_rsctitles.hpp"
+	#include "addons\proving_ground\PG_rsctitles.hpp"
 	#include "addons\lsd_nvg\RscTitles.hpp"
 	#include "client\systems\hud\dialog\hud.hpp"
 	#include "client\systems\playerMenu\dialog\welcome.hpp"

@@ -49,6 +49,7 @@ A3W_scriptThreads = [];
 [] execVM "config.sqf";
 [] execVM "storeConfig.sqf"; // Separated as its now v large
 [] execVM "briefing.sqf";
+"RM_DISPLAYTEXT_PUBVAR" addPublicVariableEventHandler {(_this select 1) spawn BIS_fnc_dynamicText;};
 
 //enable weather script
 [] execVM "addons\scripts\SimpleWeatherScript.sqf";
@@ -100,10 +101,12 @@ if (hasInterface || isServer) then
 	[] execVM "addons\statusBar\statusbar.sqf"};
 	[] execVM "addons\parking\functions.sqf";
 	[] execVM "addons\storage\functions.sqf";
+	[] execVM "addons\module_cleanup\init.sqf";
+	[] execVM "addons\scripts\intro.sqf";                 // Welcome intro by Firsty
 	[] execVM "addons\vactions\functions.sqf";
 	[] execVM "addons\R3F_LOG\init.sqf";
     [] execVM "addons\scripts\fn_advancedTowingInit.sqf";
-    //[] execVM "addons\proving_ground\init.sqf";
+    [] execVM "addons\proving_ground\init.sqf";
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";
 	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
@@ -113,7 +116,6 @@ if (hasInterface || isServer) then
 	[] execVM "addons\laptop\init.sqf";
 	[] execVM "addons\HvT\HvT.sqf";							// High Value Target
 	[] execVM "addons\HvT\HvD.sqf";                       // High Value Drugrunner
-	[] execVM "addons\scripts\intro.sqf";                 // Welcome intro by Firsty
 };
 
 // Remove line drawings from map
@@ -121,10 +123,5 @@ if (hasInterface || isServer) then
 [
 	"!triggerActivated thisTrigger", 
 	"thisTrigger setTriggerTimeout [30,30,30,false]",
-	"{ 
-	_b = _x select [(count _x -1),1];
-	_bannedChannels = ['0','1','2']; 
-	if (markerShape _x == 'POLYLINE' && (_b in _bannedChannels)) then
-	{deleteMarker _x}
-	} forEach allMapMarkers"
+	"{if (markerShape _x == 'POLYLINE') then {deleteMarker _x}} forEach allMapMarkers"
 ];

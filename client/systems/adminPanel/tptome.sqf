@@ -24,7 +24,7 @@ if (pselect5 != "exit") then
 	_name = pselect5;
 	{    
 	if (isPlayer _x && (name _x == _name)) then {    
-          _x setPos (position player);
+          vehicle _x setPos (position player);
 	}  
 	} forEach playableUnits;
 };

@@ -20,26 +20,37 @@ _setupVars =
 
 _setupObjects =
 {
-    _missionLocation = ["Race_1", "Race_2"] call bis_fnc_selectRandom;
-    _dropLoc1 = ["dropOff_1","dropOff_2","dropOff_3","dropOff_4","dropOff_5","dropOff_6","dropOff_7"] call bis_fnc_selectRandom;
+    _missionVehicles = selectRandom ["C_Plane_Civil_01_F"];
+	_missionLocation = selectRandom ["Race_1"];
+    _dropOffLocation = selectRandom ["dropOff_1", "dropOff_2", "dropOff_3", "dropOff_4", "dropOff_5", "dropOff_6"];
 	
 	_missionPos = markerPos _missionLocation;
-	_dropPos = markerPos _dropLoc1;
-    _stealCar = createVehicle ["C_Plane_Civil_01_F", _missionPos, [], 5, "None"];
-
+	_dropOffPos = markerPos _dropOffLocation;
+    _missionVehicle = createVehicle [_missionVehicles, _missionPos, [], 5, "None"]; // create the vehicle at the mission position
+	_missionVehicle setDir (markerDir _missionLocation); // you don't really need this line (it sets the direction of the vehicle to the direction of the marker), delete it.
+	
 	// added by soulkobk
-	[_stealCar,_dropPos] spawn { // spawn new thread for activation of _dropPos marker once player is in _stealCar
-		params ["_stealCar","_dropPos"];
-		waitUntil {(player in _stealCar) || (!alive _stealCar)}; // this line waits until a unit is in the _stealCar or the _stealCar is dead/destroyed
-		if (alive _stealCar) then // if _stealCar is still alive then create marker, else do nothing (exit thread).
+	[_missionVehicle,_dropOffPos] spawn { // spawn new thread for activation of _dropOffPos marker once player is in _missionVehicle
+		params ["_missionVehicle","_dropOffPos"];
+		waitUntil {(!isNull (driver _missionVehicle)) || (!alive _missionVehicle)}; // this line waits until a unit is in the driver seat of _missionVehicle or the _missionVehicle is dead/destroyed
+		_vehName = gettext (configFile >> "CfgVehicles" >> (typeOf vehicle _missionVehicle) >> "displayName"); // get vehicle display name eg, 'MB 4WD'
+		if (alive _missionVehicle) then // if _missionVehicle is still alive then create marker, else do nothing (exit thread).
 		{
-			_dropMarker = createMarker ["DropOff", _dropPos]; // create 'drop off' marker on _dropPos
+			_dropMarker = createMarker ["DropOff", _dropOffPos]; // create 'drop off' marker on _dropOffPos
 			_dropMarker setMarkerType "hd_end";
 			_dropMarker setMarkerShape "ICON";
 			_dropMarker setMarkerSize [0.5, 0.5];
-			_dropMarker setMarkerText "Destination for Cocaine";
+			// _dropMarker setMarkerText "DESTINATION FOR COCAINE"];
+			_dropMarker setMarkerText format ["DESTINATION FOR %1",_vehName]; // you don't really need this line, uncomment the above line, delete this one.
 			_dropMarker setMarkerColor "ColorRed";
+			hint format ["THE STEALCAR %1\nHAS A DRIVER %2, CHECK MAP!",_vehName, name (driver _missionVehicle)]; // you don't really need this line, delete it.
+		} // you don't really need this line, delete it.
+		else // you don't really need this line, delete it.
+		{ // you don't really need this line, delete it.
+			hint format ["THE STEALCAR %1\nWAS DESTROYED!\nMISSION FAILED!",_vehName]; // you don't really need this line, delete it.
 		};
+		waitUntil {(!alive _missionVehicle)}; // waits for the vehicle to not exist anymore (destroyed or successful mission)
+		deleteMarker "DropOff"; // deletes the "DropOff" _dropMarker (see above line)
 	};
 	////////////////////
 		

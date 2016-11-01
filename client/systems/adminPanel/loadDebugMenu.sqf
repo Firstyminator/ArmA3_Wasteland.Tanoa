@@ -24,9 +24,11 @@ if (_uid call isAdmin) then
 					"Access Vehicle Store",
 					"Access ATM Dialog",
 					"Access Respawn Dialog",
-					"Empty",
+					"Access Proving Grounds",
 					"Show Server FPS",
-					"Access News"
+					"Unlock All Objects (15m)",
+					"Delete Unlocked Objects (15m)",
+					"Relock Objects (30m)"
 	];
 
 	{

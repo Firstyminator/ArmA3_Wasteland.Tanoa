@@ -25,15 +25,15 @@ if ((getPlayerUID player) call isAdmin) then
 
 		(findDisplay 27910) closeDisplay 0; // ReviveBlankGUI_IDD
 		(findDisplay 27911) closeDisplay 0; // ReviveGUI_IDD
-		[[player, true], "A3W_fnc_hideObjectGlobal"] call A3W_fnc_MP;	
 
-		hint "You are now invulnerable and invisible.";
+		hint "You are now invulnerable";
+		if (!isNil "notifyAdminMenu") then { ["GodMode", "On"] call notifyAdminMenu };
 	}
 	else
 	{
 		player allowDamage true;
 		player setVariable ["isAdminInvulnerable", false, true];
-		[[player, false], "A3W_fnc_hideObjectGlobal"] call A3W_fnc_MP;	
-		hint "You are no longer invulnerable and invisible.";
+		hint "You are no longer invulnerable";
+		if (!isNil "notifyAdminMenu") then { ["GodMode", "Off"] call notifyAdminMenu };
 	};
 };

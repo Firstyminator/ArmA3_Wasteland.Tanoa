@@ -71,7 +71,7 @@ AirMissions =
 	["mission_HostileHelicopter", 0.5],
 	["mission_HostileJet", 1],
 	["mission_PawneeSquadron", 1],
-	["mission_DoubleBlackfish", 1],
+	["mission_BlackfootTwins", 1],
 	["mission_DeadSky", 1],
 	["mission_JetFormation", 1]
 	
@@ -86,7 +86,6 @@ SpecialMissions =
 	["mission_HostageRescue", 1],
 	["mission_TombRaider", 1],
 	["mission_UAV", 1],
-	["mission_hightechengineer", 1],
 	["mission_Explosives", 1],
 	["mission_Gravedigger", 1],
 	["mission_Train", 1]

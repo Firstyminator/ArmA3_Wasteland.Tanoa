@@ -15,7 +15,7 @@
 #define OBJECT_SEARCH_ACTION_CLEAR_MAP 2
 
 // Limit to 1000m to stop this being crazy laggy
-#define OBJECT_SEARCH_RADIUS 25000
+#define OBJECT_SEARCH_RADIUS 1000
 
 disableSerialization;
 
