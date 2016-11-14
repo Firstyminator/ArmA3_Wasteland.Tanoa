@@ -11,7 +11,8 @@ private _towns =
 	["Town_Belfort", -1, "Belfort"],
 	["Town_BluePearl", -1, "Blue Pearl Port"],
 	["Town_Doodstil", -1, "Doodstil"],
-	["Town_Georgetown", -1, "Georgetown"],
+	["Town_Georgetown_South", -1, "Georgetown South"],
+	["Town_Georgetown_North", -1, "Georgetown North"],
 	["Town_Harcourt", -1, "Harcourt"],
 	["Town_Katkoula", -1, "Katkoula"],
 	["Town_Kotomo", -1, "Kotomo"],
@@ -25,12 +26,15 @@ private _towns =
 	["Town_Oumere", -1, "Ouméré"],
 	["Town_Rautake", -1, "Rautake"],
 	["Town_Regina", -1, "Regina"],
-	["Town_Rochelle", -1, "La Rochelle"],
+	["Town_Rochelle_East", -1, "La Rochelle East"],
+	["Town_Rochelle_West", -1, "La Rochelle West"],
 	["Town_StJulien", -1, "Saint-Julien"],
-	["Town_Tanouka", -1, "Tanouka"],
+	["Town_Tanouka_North", -1, "Tanouka North"],
+	["Town_Tanouka_South", -1, "Tanouka South"],
 	["Town_Tavu", -1, "Tavu"],
 	["Town_Tuvanaka", -1, "Tuvanaka"],
 	["Town_Vagalala", -1, "Vagalala"],
+	["Town_RedSpring_Slum", -1, "Red Spring Slums"],
 	["Town_Yanukka", -1, "Yanukka"]
 ];
 

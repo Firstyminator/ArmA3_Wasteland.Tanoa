@@ -23,7 +23,7 @@ if (["A3W_unlimitedStamina"] call isConfigOn) then
    _player setCustomAimCoef 0.15;
 };
 
-//AJ Custom Camera Functions
+// Custom Camera Functions
 [] spawn fn_cameracheck;
 [] spawn fn_limitTI;
 

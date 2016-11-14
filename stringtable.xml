@@ -32,37 +32,20 @@
 			<English>You have been punished for teamkilling twice during this server session. Your inventory has been wiped, and you are now locked to the Independent side.</English>
 		</Key>
 		<Key ID="STR_WL_Loading_Teamkiller">
-			<English>You are restricted to the Independent side, due to having 2+ teamkills during this server session AND/OR more than 10 Teamkills.</English>
+			<English>You are restricted to the Independent side, due to having done 2 or more teamkills during this server session.</English>
 		</Key>
 		<Key ID="STR_WL_Loading_Teamswitched">
-			<English>You have played as %1 for too long and cannot switch to the other team. You can still play as Independent. (ADMIN WILL NOT MOVE YOU)</English>
-		</Key>
-		<Key ID="STR_WL_Loading_GlobalVoice">
-			<English>You have been kicked too many times for using voice. You can join another server or wait until server restart.</English>
-		</Key>
-	</Package>
-	<Package name="WelcomeMessage">
-		<Key ID="STR_WL_WelcomeToWasteland">
-			<English>&lt;t color='#FF8000' size='2.5' &gt;NoElite Wasteland Tanoa &lt;/t&gt;</English>
-		</Key>
-		<Key ID="STR_WL_YouAreInTeam">
-			<English>&lt;t color='#FFFFFF' size='1' &gt;* You are on &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt; %3 &lt; /t &gt;&lt; /t &gt; team. &lt;br/&gt;&lt;t color='#FFFFFF' size='1' &gt;* &lt;t color="#FF1111"&gt;ATTACKING or STEALING&lt;/t&gt;&lt;t color='#FFFFFF' size='1' &gt; from other &lt;t color="%2"&gt; %4 &lt; /t &gt;&lt;t color='#FFFFFF' size='1' &gt; players is &lt;t color="#FF1111"&gt;BANNABLE&lt;/t&gt;&lt;br/&gt;&lt;t color='#FFFFFF' size='1' &gt;* Punish Teamkillers to move to Indie. 10+ Teamkills = Permanently Indie (Automated) </English>
-		</Key>
-		<Key ID="STR_WL_YouAreInFFA">
-			<English>&lt;t color='#FFFFFF' size='1' &gt;* You are in &lt;img size="1.5" image="%1"/&gt; &lt;t color="%2"&gt;%3&lt;/t&gt; team.&lt;br/&gt;* You are &lt;t color="#00aa00"&gt;FREE TO ATTACK ANYONE&lt;/t&gt;&lt;br/&gt;&lt;/t&gt;</English>
-		</Key>
-		<Key ID="STR_WL_MapMoreInfo">
-			<English>&lt;t color='#FFFFFF' size='1' &gt;Conquest: Capture and Maintain Flags. &lt;br/&gt;Press the Windows key to toggle player names&lt;br/&gt;Press END to put in Ear Plugs&lt;br/&gt; &lt;/t&gt;</English>
+			<English>You have played as %1 for too long and cannot switch to the other team. You can still play as Independent. (or if online, ask an admin to unlock you)</English>
 		</Key>
 	</Package>
 	<Package name="TeamKillWarningMessage">
 		<Key ID="STR_TK_MESSAGE">
-			<English>&lt;t size='2' color='#ff0000'&gt;Team killing is frowned upon!&lt;/t&gt;&lt;br/&gt;If this was a mistake then you must explain yourself and say sorry, otherwise they will mark you as teamkiller and you will get kicked.</English>
+			<English>&lt;t size='2' color='#ff0000'&gt;Team killing is against the rules!&lt;/t&gt;&lt;br/&gt;If this was a mistake then you must explain yourself and say sorry, otherwise they will mark you as teamkiller and you will get kicked.</English>
 		</Key>
 	</Package>
 	<Package name="Diary">
 		<Key ID="STR_WL_Diary_RulesContent">
-			<English>&lt;br/&gt;    1. Keep bad language to a minimum. If you have a problem with another player, take it to direct.&lt;br/&gt;    2. NO VOIP IN GLOBAL. Use the channels or Teamspeak!.&lt;br/&gt;3. Do not exploit R3F or any other add-ons or you will be banned.&lt;br/&gt;4. Using or spamming with loud\long custom sound commands will cause punishment up to permanent ban</English>
+			<English>&lt;br/&gt;    1. Keep bad language to a minimum. If you have a problem with another player, take it to direct.&lt;br/&gt;    2. NO VOIP IN GLOBAL. Use the channels or Teamspeak!.&lt;br/&gt;    3. Team killing when you are in BLUFOR or OPFOR is forbidden and punishable. Play as Independent if you want to be free for all.&lt;br/&gt;    4. Revealing information about your (ex)team to other teams is lame and not appreciated&lt;br/&gt;    5. Do not exploit R3F or any other add-ons or you will be banned.&lt;br/&gt;    6. Using or spamming with loud\long custom sound commands will cause punishment up to permanent ban</English>
 		</Key>
 	</Package>
 	<Package name="ShopDescriptions">
@@ -99,30 +82,33 @@
 		<Key ID="STR_WL_ShopDescriptions_Warchest">
 			<English>A safe to store your team's money.</English>
 		</Key>
-		<Key ID="STR_WL_ShopDescriptions_Pinlock">
-+            <English>This programming tool is a once use only and non removable device to add a pincode to an owned vehicle. By using this your friends can also lock and unlock your vehicle!</English>
-+       </Key>
+		<Key ID="STR_WL_ShopDescriptions_LSD">
+            <English>A synthetic crystalline compound, lysergic acid diethylamide, that is a potent hallucinogenic drug.</English>
+        </Key>
+		
+		<Key ID="STR_WL_ShopDescriptions_Crack">
+            <English>When people smoke crack, they have a feeling called being high. The name crack comes from the cracking sound the drug makes as it is smoked.</English>
+        </Key>
+		
+		<Key ID="STR_WL_ShopDescriptions_Meth">
+            <English>Meth can be in powder or crystal form, and can be snorted, smoked, injected, or eaten. In its smoked form, metha is known as 'ice', 'crystal', 'crank', or 'glass'.</English>
+        </Key>
+		
+        <Key ID="STR_WL_ShopDescriptions_Marijuana">
+            <English>Often consumed for its psychoactive and physiological effects, which can include heightened mood or euphoria, relaxation, and an increase in appetite.</English>
+        </Key>
+        <Key ID="STR_WL_ShopDescriptions_Cocaine">
+            <English>An addictive drug derived from coca or prepared synthetically, used as an illegal stimulant and sometimes medicinally as a local anesthetic.</English>
+        </Key>
+        <Key ID="STR_WL_ShopDescriptions_Heroin">
+            <English>A highly addictive analgesic drug derived from morphine, often used illicitly as a narcotic producing euphoria.</English>
+        </Key>
+		
+		
 	</Package>
 	<Package name="Dialogs">
 		<Key ID="STR_WL_dialog_TeamkillText">
 			<English>You have been teamkilled by %2 player %1&lt;br/&gt;&lt;br/&gt;If this was an accident, forgive him, otherwise they should explain their actions.&lt;br/&gt;&lt;br/&gt;If the player does not apologize, punish him.</English>
-		</Key>
-	</Package>
-	<Package name="ATM_Menu">
-		<Key ID="STR_ATM_Title">
-			<Original>Bank Account Management</Original>
-		</Key>
-		<Key ID="STR_ATM_Withdraw">
-			<Original>Withdraw</Original>
-		</Key>
-		<Key ID="STR_ATM_Deposit">
-			<Original>Deposit</Original>
-		</Key>
-		<Key ID="STR_ATM_Transfer">
-			<Original>Transfer</Original>
-		</Key>
-		<Key ID="STR_ATM_Close">
-			<Original>Close</Original>
 		</Key>
 	</Package>
 	<Package name="Errors">

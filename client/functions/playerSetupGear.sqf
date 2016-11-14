@@ -34,8 +34,8 @@ _player unlinkItem "ItemGPS";
 // Remove NVG
 if (hmd _player != "") then { _player unlinkItem hmd _player };
 
-// Add NVG - Disabled AJ
-// _player linkItem "NVGoggles";
+// Add NVG
+ _player linkItem "NVGoggles";
 
 switch (_donatorLevel) do
 {
@@ -128,26 +128,6 @@ switch (_donatorLevel) do
 	
 };
 
-/* AJ Remove Class Loaded
-switch (true) do
-{
-	case (["_medic_", typeOf _player] call fn_findString != -1):
-	{
-		_player removeItem "FirstAidKit";
-		_player addItem "Medikit";
-	};
-	case (["_engineer_", typeOf _player] call fn_findString != -1):
-	{
-		_player addItem "MineDetector";
-		_player addItem "Toolkit";
-	};
-	case (["_sniper_", typeOf _player] call fn_findString != -1):
-	{
-		_player addWeapon "Rangefinder";
-	};
-};
-
-*/
 //load supporter loadouts
 _this call supporters;
 

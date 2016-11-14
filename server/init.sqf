@@ -30,7 +30,7 @@ if (isServer) then
 		};
 
 		diag_log format ["HandleDisconnect - %1 - alive: %2 - local: %3 - isPlayer: %4 - group: %5", [_name, _uid], alive _unit, local _unit, isPlayer _unit, group _unit];
-		//aj - text disconnect to lobby
+		//Text disconnect to lobby
 		(format ["Player %1 went to lobby", _name]) remoteExecCall ["systemChat", 0];
 
 		_veh = objectParent _unit;
@@ -163,12 +163,11 @@ if (isServer) then
 		"APOC_coolDownTimer",
 		"BoS_coolDownTimer",
 		"Safe_coolDownTimer",
-		"A3W_enableTILimitations",       //AJ TI Master switch
-		"A3W_disableTIforAll",			 //Disable TI for Everything
-		"A3W_disableTIforLaunchers",     //AJ Disable TI for Launchers
-		"A3W_disableTIforDrones",        //AJ Disable TI for Drones
-		"A3W_disablevehicleThermals",    //AJ Disable TI for Vehicles 
-		"A3W_AJskillOverride",			 //AJ Active custom AI Skill block
+		"A3W_enableTILimitations",       // TI Master switch
+		"A3W_disableTIforAll",			 // Disable TI for Everything
+		"A3W_disableTIforLaunchers",     // Disable TI for Launchers
+		"A3W_disableTIforDrones",        // Disable TI for Drones
+		"A3W_disablevehicleThermals",    // Disable TI for Vehicles 
 		"A3W_survivalSystem",
 		"A3W_extDB_GhostingAdmins",
 		"A3W_extDB_SaveUnlockedObjects",

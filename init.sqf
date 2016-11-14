@@ -98,7 +98,7 @@ if (isServer) then
 if (hasInterface || isServer) then
 {
 	//init 3rd Party Scripts
-	[] execVM "addons\statusBar\statusbar.sqf"};
+	[] execVM "addons\statusBar\statusbar.sqf";
 	[] execVM "addons\parking\functions.sqf";
 	[] execVM "addons\storage\functions.sqf";
 	[] execVM "addons\module_cleanup\init.sqf";
@@ -114,14 +114,5 @@ if (hasInterface || isServer) then
 	[] execVM "addons\stickyCharges\init.sqf";
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 	[] execVM "addons\laptop\init.sqf";
-	[] execVM "addons\HvT\HvT.sqf";							// High Value Target
-	[] execVM "addons\HvT\HvD.sqf";                       // High Value Drugrunner
+	[] execVM "addons\scripts\HvT.sqf";							// High Value Target
 };
-
-// Remove line drawings from map
-(createTrigger ["EmptyDetector", [0,0,0], false]) setTriggerStatements
-[
-	"!triggerActivated thisTrigger", 
-	"thisTrigger setTriggerTimeout [30,30,30,false]",
-	"{if (markerShape _x == 'POLYLINE') then {deleteMarker _x}} forEach allMapMarkers"
-];

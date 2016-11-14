@@ -61,7 +61,6 @@ class A3W_fnc_setVehicleAmmoDef {};
 class A3W_fnc_unflip {};
 class APOC_srv_startAirdrop { allowedTargets = 2; };
 class JTS_FNC_SENT {};
-class A3W_fnc_aj_s_refreshZeus { allowedTargets = 2; };     //Zeus Server
 class SA_Set_Owner { allowedTargets = 2; };                 //Towing Server
 class SA_Hide_Object_Global { allowedTargets = 2; };        //Towing Server
 class SA_Simulate_Towing { allowedTargets = 1; };           //Towing Client

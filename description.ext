@@ -102,12 +102,6 @@ class CfgFunctions
 	};
 
 	#include "addons\CHVD\CfgFunctions.hpp"
-		//AJ Begin
-	class armajunkies
-	{
-		#include "addons\aj\aj_FunctionsDefinition.hpp"
-	};
-	//AJ End
 };
 
 class CfgNotifications

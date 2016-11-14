@@ -24,23 +24,26 @@ else
 	 Important: The player UID must always be placed between
 	            double quotes (") and all lines need to have
 	            a comma (,) except the last one.
-	********************************************************/
+	/********************************************************/
 
 	// Low Administrators: manage & spectate players, remove hacked vehicles
 	lowAdmins = compileFinal str
 	[
 		// Put player UIDs here
+
 	];
 
 	// High Administrators: manage & spectate players, remove hacked vehicles, show player tags
 	highAdmins = compileFinal str
 	[
+		// Put player UIDs here
 	];
 
 	// Server Owners: access to everything, including god mode, money, guns, and vehicles
 	serverOwners = compileFinal str
 	[
 		// Put player UIDs here
+
 	];
 
 	/********************************************************/

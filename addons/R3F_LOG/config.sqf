@@ -41,7 +41,7 @@
  * Si true :  tous les objets sont inactifs par défaut
  *            Vous pouvez activer quelques objets avec : objet setVariable ["R3F_LOG_disabled", false];
  */
-R3F_LOG_CFG_disabled_by_default = true;
+R3F_LOG_CFG_disabled_by_default = false;
 
 /**
  * LOCK THE LOGISTICS FEATURES TO SIDE, FACTION OR PLAYER
@@ -237,7 +237,7 @@ R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
 [
 	// e.g. : "MyTowingVehicleClassName1", "MyTowingVehicleClassName2"
 
-    "SUV_01_base_F",
+	"SUV_01_base_F",
 	"Offroad_01_base_F",
 	"Van_01_base_F",
 	"MRAP_01_base_F",
@@ -253,7 +253,13 @@ R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
 	"MBT_01_base_F",
 	"MBT_02_base_F",
 	"MBT_03_base_F",
-	"Boat_Armed_01_base_F"
+	"B_CTRG_LSV_01_light_F",
+	"B_T_LSV_01_unarmed_F",
+	"B_T_LSV_01_armed_F",
+	"O_T_LSV_02_unarmed_F",
+	"O_T_LSV_02_armed_F",
+	"C_Offroad_02_unarmed_F",
+	"I_C_Offroad_02_unarmed_F"
 ];
 
 /**
@@ -324,7 +330,7 @@ R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 [
 	// e.g. : "MyLiftableObjectClassName1", "MyLiftableObjectClassName2"
-	//"Land_Device_assembled_F", //relocker
+	"Land_Device_assembled_F", // Base Locker
 	"Hatchback_01_base_F",
 	"SUV_01_base_F",
 	"Offroad_01_base_F",
@@ -339,10 +345,6 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"SDV_01_base_F",
 	"Boat_Civil_01_base_F",
 	"Boat_Armed_01_base_F",
-	"Land_Pod_Heli_Transport_04_box_F",
-	"Land_CargoBox_V1_F",
-	"Land_Cargo20_yellow_F",
-	"Land_Cargo40_white_F",
 	"Wheeled_APC_F",
 	"APC_Tracked_01_base_F",
 	"APC_Tracked_02_base_F",
@@ -350,7 +352,12 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"MBT_01_base_F",
 	"MBT_02_base_F",
 	"MBT_03_base_F",
-	"Land_Cargo20_military_green_F"
+	"Land_Pod_Heli_Transport_04_box_F",
+	"Land_Cargo20_military_green_F",
+	"Land_Pod_Heli_Transport_04_box_F",
+	"Land_CargoBox_V1_F",
+	"Land_Cargo20_yellow_F",
+	"Land_Cargo40_white_F"
 ];
 
 
@@ -378,8 +385,8 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
 	// e.g. : ["MyTransporterClassName1", itsCapacity], ["MyTransporterClassName2", itsCapacity]
-	["Quadbike_01_base_F", 5],
-	["C_Scooter_Transport_01_F", 5],
+	["Quadbike_01_base_F", 10],
+	["C_Scooter_Transport_01_F", 10],
 	["UGV_01_base_F", 10],
 	["Hatchback_01_base_F", 10],
 	["SUV_01_base_F", 20],
@@ -391,8 +398,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["MRAP_01_base_F", 20],
 	["MRAP_02_base_F", 20],
 	["MRAP_03_base_F", 20],
-	["B_Truck_01_box_F", 150],
-	["Truck_F", 75],
+	["B_Truck_01_box_F", 750],
+	["Truck_F", 175],
 	["Wheeled_APC_F", 30],
 	["Tank_F", 30],
 	["Rubber_duck_base_F", 10],
@@ -411,9 +418,9 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["Plane_Civil_01_base_F", 5],
 	["VTOL_01_base_F", 50],
 	["VTOL_02_base_F", 30],
-	["Land_Pod_Heli_Transport_04_box_F", 150],
-	["Land_Cargo20_military_green_F", 150],
-	["Land_Pod_Heli_Transport_04_box_F", 300],
+	["Land_Pod_Heli_Transport_04_box_F", 250],
+	["Land_Cargo20_military_green_F", 450],
+	["Land_Pod_Heli_Transport_04_box_F", 450],
 	["Land_CargoBox_V1_F", 500],
 	["Land_Cargo20_yellow_F", 1000],
 	["Land_Cargo40_white_F", 2000]
@@ -431,7 +438,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	// e.g. : ["MyTransportableObjectClassName1", itsCost], ["MyTransportableObjectClassName2", itsCost]
 	["Static_Designator_01_base_F", 2],
 	["Static_Designator_02_base_F", 2],
-	["Land_Device_assembled_F", 100],   //Re Locker
+	["Land_Device_assembled_F", 100],   //Base Locker
     ["Box_GEN_Equip_F", 10],            //Safe
     ["Land_PillboxWall_01_6m_F", 10],   //Base Door
     ["Land_TripodScreen_01_dual_v1_F", 5],         //Base Door Key

@@ -3,10 +3,8 @@
 // ******************************************************************************************
 // A3Wasteland config file
 // You will need to shutdown the server to edit settings in this file!
-
-// All saving is done via the server's profileNamespace by default; iniDBI will be automatically used if you have if installed
-// if you have any doubts and/or questions about the mission find us at a3wasteland.com 
-// This file is overridden by the external file "A3Wasteland_settings\main_config.sqf" if present
+// if you have any doubts and/or questions about the mission find us at a3wasteland.com
+// This file overrides the settings defined in "server\default_config.sqf"
 
 // General settings
 A3W_teamPlayersMap = 1;            // Show all friendly players on the map at all times, regardless of difficulty level (0 = no, 1 = yes)
@@ -22,16 +20,17 @@ A3W_timeMultiplierNight = 4.0;     // Sets the speed of time between 8 PM and 5 
 A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 
 // Player settings
-A3W_startingMoney = 250;           // Amount of money that players start with
+A3W_startingMoney = 1000;           // Amount of money that players start with
 A3W_survivalSystem = 0;            // Food and water are required to stay alive (0 = no, 1 = yes) - 0 removes food and water items from the mission
 A3W_unlimitedStamina = 1;          // Allow unlimited sprinting, jumping, etc. (0 = no, 1 = yes) - this also removes energy drinks from the mission
 A3W_bleedingTime = 300;             // Time in seconds for which to allow revive after a critical injury (minimum 10 seconds)
 A3W_headshotNoRevive = 0;          // Instant death on fatal headshot by enemy player with non-explosive ammo (0 = no, 1 = yes)
+A3W_customDeathMessages = 0;       // If difficulty option deathMessages=0, display custom messages related to causes of death, as defined in fn_deathMessage.sqf (0 = no, 1 = yes)
 
 // Spawn settings
 A3W_townSpawnCooldown = 5*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
 A3W_spawnBeaconCooldown = 5*60;    // Number of seconds to wait between each use of a specific spawn beacon (0 = disabled)
-A3W_spawnBeaconSpawnHeight = 1500; // Altitude in meters at which players will spawn when using spawn beacons (0 = ground/sea)
+A3W_spawnBeaconSpawnHeight = 0; // Altitude in meters at which players will spawn when using spawn beacons (0 = ground/sea)
 A3W_resupplyCostPR = 4;			   // Determine resupply cost by vehicle store cost / A3W_resupplyCostPR. (4 = default, %25 percent)
 A3W_firstPersonCamOnFoot = 1;	   // Lock infantry to first person view
 A3W_firstPersonCamNotDriver = 1;   // Lock all vehicle seating positions besides driver to first person view
@@ -59,20 +58,13 @@ A3W_vehiclePurchaseCooldown = 60;  // Number of seconds to wait before allowing 
 A3W_atmEnabled = 1;                // Enable ATM system (0 = no, 1 = yes)
 A3W_atmMaxBalance = 3000000;       // Maximum amount of money that can be stored in a bank account (don't go over 16777216 as numbers start losing accuracy)
 A3W_atmTransferFee = 5;            // Fee in percent charged to players for money transfers to other players (0 to 50)
-A3W_atmTransferAllTeams = 0;       // Allow money transfers between players of all teams/sides (0 = same team only, 1 = all teams)
+A3W_atmTransferAllTeams = 1;       // Allow money transfers between players of all teams/sides (0 = same team only, 1 = all teams)
 A3W_atmEditorPlacedOnly = 0;       // Only allow access via ATMs placed from the mission editor (0 = all ATMs from towns & editor allowed, 1 = ATMs from editor only) Note: Stratis has no town ATMs, only editor ones.
 A3W_atmMapIcons = 1;               // Draw small icons on the map that indicate ATM locations (0 = no, 1 = yes)
 A3W_atmRemoveIfDisabled = 1;       // Remove all ATMs from map if A3W_atmEnabled is set to 0 (0 = no, 1 = yes)
 
-// Not currently implemented, soon
-A3W_atmBounties = 1;
-A3W_bountyMax = 100000;
-A3W_bountyMin = 1000;
-A3W_bountyFee = 50;
-A3W_bountyKillsLifetime = 3*24;
-
 // Persistence settings
-A3W_savingMethod = "iniDB";      // Method used for saving data ("profile", "iniDB", "extDB")
+A3W_savingMethod = "extDB";        // Method used for saving data ("profile", "iniDB", "extDB")
 A3W_playerSaving = 1;              // Save player data like position, health, inventory, etc. (0 = no, 1 = yes)
 A3W_moneySaving = 1;               // If playerSaving = 1, save player money amount (0 = no, 1 = yes)
 A3W_playerStatsGlobal = 0;         // If playerSaving = 1 and savingMethod = "extDB", players' stats on the scoreboard will be their all-time global values from all servers of your database (0 = no, 1 = yes)
@@ -110,7 +102,7 @@ A3W_extDB_GhostingTimer = 5*60;    // Number of seconds a player has to wait whe
 A3W_extDB_GhostingAdmins = 0;      // Apply ghosting restriction to server admins (0 = no, 1 = yes)
 A3W_extDB_SaveUnlockedObjects = 1; // Save and restore unlocked baseparts that were purchased or locked at least once during their lifetime (0 = no, 1 = yes)
 A3W_extDB_ConfigName = "A3W";      // Name of the connection config from extdb-conf.ini to be used (the one within [brackets])
-A3W_extDB_IniName = "a3wasteland"; // Name of the INI file in extDB\sql_custom to be used
+A3W_extDB_IniName = "a3wasteland"; // Name of the INI file in extDB\sql_custom_v2 to be used
 A3W_extDB_Misc = 0;                // Enable extDB Misc Protocol (0 = no, 1 = yes) - no associated features implemented in vanilla A3W
 A3W_extDB_Steam = 0;               // Enable extDB Steam Protocol (0 = no, 1 = yes) - no associated features implemented in vanilla A3W
 A3W_extDB_Rcon = 0;                // Enable extDB Rcon Protocol (0 = no, 1 = yes) - no associated features implemented in vanilla A3W
@@ -136,27 +128,25 @@ A3W_hcObjSavingID = 1;             // ID of the headless client in charge of obj
 // Server spawn settings
 A3W_serverSpawning = 1;            // Vehicle, object, and loot spawning (0 = no, 1 = yes)
 A3W_vehicleSpawning = 1;           // If serverSpawning = 1, spawn vehicles in towns (0 = no, 1 = yes)
-A3W_vehicleQuantity = 200;         // Approximate number of land vehicles to be spawned in towns
+A3W_vehicleQuantity = 100;         // Approximate number of land vehicles to be spawned in towns
 A3W_boatSpawning = 1;              // If serverSpawning = 1, spawn boats at marked areas near coasts (0 = no, 1 = yes)
 A3W_heliSpawning = 1;              // If serverSpawning = 1, spawn helicopters in some towns and airfields (0 = no, 1 = yes)
 A3W_planeSpawning = 0;             // If serverSpawning = 1, spawn planes at some airfields (0 = no, 1 = yes)
-A3W_boxSpawning = 0;               // If serverSpawning = 1, spawn weapon crates in 50% towns (0 = no, 1 = yes)
+A3W_boxSpawning = 1;               // If serverSpawning = 1, spawn weapon crates in 50% towns (0 = no, 1 = yes)
 A3W_baseBuilding = 0;              // If serverSpawning = 1, spawn base parts in towns (0 = no, 1 = yes)
 A3W_essentialsSpawning = 0;        // If serverSpawning = 1, spawn essential items (food sacks, water barrels, minor supply crates) in towns (0 = no, 1 = yes)
 
-
 // Loot settings
 A3W_buildingLootWeapons = 1;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)
-A3W_buildingLootSupplies = 1;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
-A3W_buildingLootChances = 25;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
+A3W_buildingLootSupplies = 0;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
+A3W_buildingLootChances = 50;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
 A3W_vehicleLoot = 1;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0
 
 // Territory settings
 A3W_territoryCaptureTime = 3*60;   // Time in seconds needed to capture a territory
 A3W_territoryPayroll = 1;          // Periodically reward sides and indie groups based on how many territories they own (0 = no, 1 = yes)
 A3W_payrollInterval = 10*60;       // Delay in seconds between each payroll
-A3W_payrollAmount = 500;           // Amount of money rewarded per territory on each payroll
-A3W_territoryAllowed = [0,1,2,3,4,5,6,7,8,9]; //Territory Allowed (0:KAVALA,1:ALTISAIR,2:PYRGOS,3:SELANKANO,4:KORE,5:ZAROS,6:DOCKS,7:GHOST,8:ABDERA,9:PANOCHORI)
+A3W_payrollAmount = 250;           // Amount of money rewarded per territory on each payroll
 
 // Mission settings
 A3W_serverMissions = 1;            // Enable server missions (0 = no, 1 = yes)
@@ -172,11 +162,8 @@ A3W_hackedMissionPercentage = 0.008; // Percentage to come out of bankaccounts
 A3W_hackedMissionExtraFixMoney = 30000;	// Fix extra money for successfully download
 
 //Settings concerning Thermal Vision
-A3W_enableTILimitations = 1;     // Globally enable the Thermal Vision limitions underneath (if set to 0 the settings underneath are not applied)
+A3W_enableTILimitations = 0;     // Globally enable the Thermal Vision limitions underneath (if set to 0 the settings underneath are not applied)
 A3W_disableTIforAll = 1; 		// Disable Thermal Vision for Everything
 A3W_disableTIforLaunchers = 1;  // Disable Thermal Vision when using Launchers
 A3W_disableTIforDrones = 1;     // Disable Thermal Vision when using Drones
 A3W_disablevehicleThermals = 1;	// Disable Thermal Vision for Vehicles
-
-//Use Custom AJ AI Skill Settings
-A3W_AJskillOverride = 1;

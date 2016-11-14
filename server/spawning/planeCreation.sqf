@@ -28,7 +28,6 @@ _plane setDamage 0;
 [_plane] call vehicleSetup;
 
 _plane setFuel (0.4 + random 0.2);
-_plane setVariable ["R3F_LOG_disabled",false,true];
 
 _plane setDir _markerDir;
 

@@ -77,7 +77,7 @@ spawnRandom = "client\functions\spawnRandom.sqf" call mf_compile;
 // refuelVehicle = "client\systems\playerMenu\refuel.sqf" call mf_compile;
 // repairVehicle = "client\systems\playerMenu\repair.sqf" call mf_compile;
 
-//AJ Functions
+//TI Functions
 fn_cameracheck = "addons\cameracheck\cameracheck.sqf" call mf_compile;
 fn_limitTI = "addons\limitTI\limitTI.sqf" call mf_compile;
 
@@ -92,7 +92,6 @@ teamkillAction = "client\functions\doTeamKillAction.sqf" call mf_compile;
 teamkillMessage = "client\functions\showTeamKillMessage.sqf" call mf_compile;
 
 // Dialog compiles
-loadTOParmaInfo = "addons\TOParmaInfo\loadTOParmaInfo.sqf" call mf_compile;
 client_respawnDialog = "client\systems\playerMenu\dialog\loadRespawnDialog.sqf" call mf_compile;
 fn_checkStoreItemDLC = "client\functions\fn_checkStoreItemDLC.sqf" call mf_compile;
 fn_respawnTimer = "client\systems\scoreboard\fn_respawnTimer.sqf" call mf_compile;
@@ -115,6 +114,6 @@ weaponInfo = "client\systems\gunStore\weaponInfo.sqf" call mf_compile;
 if (isNil "A3W_fnc_MP") then { A3W_fnc_MP = compile preprocessFileLineNumbers "\A3\functions_f\MP\fn_MP.sqf" };
 if (isNil "A3W_fnc_MPexec") then { A3W_fnc_MPexec = compile preprocessFileLineNumbers "\A3\functions_f\MP\fn_MPexec.sqf" };
 
-player groupChat "Looking for my stuff.. Hope i find it!";
-sleep 10;
+player groupChat "Looking for my stuff.. where did i put it..";
+sleep 6;
 playerCompiledScripts = true;

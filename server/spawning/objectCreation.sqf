@@ -56,7 +56,6 @@ _adjustZ = switch (true) do
 {
 	case (_objClass == "Land_Scaffolding_F"):         { -3 };
 	case (_objClass == "Land_Canal_WallSmall_10m_F"): { 3 };
-    case (_objClass == "Land_PillboxWall_01_6m_F"):   { 3 };
 	case (_objClass == "Land_Canal_Wall_Stairs_F"):   { 3 };
 	default                                           { 0 };
 };
@@ -64,6 +63,5 @@ _adjustZ = switch (true) do
 _pos = getPosATL _obj;
 _pos set [2, (_pos select 2) + _adjustZ];
 _obj setPos _pos;
-_obj setVariable ["R3F_LOG_disabled",false,true];
 
 [_obj] call basePartSetup;

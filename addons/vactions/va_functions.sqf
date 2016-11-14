@@ -348,10 +348,10 @@ va_is_lockable = {
   if (_vehicle isKindOf "Man") exitWith {false};
   
   
-  //AJ allow player locking action only for mission and purchased vehicle
+  //Allow player locking action only for mission and purchased vehicle
   if ( !(_vehicle getVariable ["A3W_missionVehicle", false] || _vehicle getVariable ["A3W_purchasedVehicle", false])) exitWith {false};
   
-  //AJ disable locking for destroyed vehicles
+  //Disable locking for destroyed vehicles
   if (damage _vehicle == 1) exitWith {false};
   
 

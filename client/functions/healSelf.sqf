@@ -31,6 +31,6 @@ switch (true) do
 
 	case (!("Medikit" in (items player)) || !("FirstAidKit" in (items player))):
 	{
-		[format["<t size='0.75' color='#ffff00'>FirstAidKit or MediKit required</t>"], 0,1,5,0,0,301] spawn bis_fnc_dynamicText;
+		[format["<t size='0.75' color='#ffff00'>FirstAidKit or Medikit required</t>"], 0,1,5,0,0,301] spawn bis_fnc_dynamicText;
 	};
 };

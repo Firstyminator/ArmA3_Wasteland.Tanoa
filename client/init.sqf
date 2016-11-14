@@ -25,17 +25,11 @@ groupManagmentActive = false;
 pvar_PlayerTeamKiller = [];
 doCancelAction = false;
 
-//AJ Beacondetector
-BeaconScanInProgress = false;
-
 //Initialization Variables
 playerCompiledScripts = false;
 playerSetupComplete = false;
 
 waitUntil {!isNull player && time > 0};
-
-//disable environmental effects (ambient life + sound)
-enableEnvironment true;
 
 removeAllWeapons player;
 player switchMove "";
@@ -57,7 +51,7 @@ if !(playerSide in [BLUFOR,OPFOR,INDEPENDENT]) exitWith
 //Setup player events.
 if (!isNil "client_initEH") then { player removeEventHandler ["Respawn", client_initEH] };
 player addEventHandler ["Respawn", { _this spawn onRespawn }];
-player addEventHandler ["Killed", { _this spawn onKilled }];
+player addEventHandler ["Killed", onKilled];
 
 call compile preprocessFileLineNumbers "addons\far_revive\FAR_revive_init.sqf";
 
@@ -78,7 +72,6 @@ if (["A3W_playerSaving"] call isConfigOn) then
 {
 	call compile preprocessFileLineNumbers "persistence\client\players\setupPlayerDB.sqf";
 	call fn_requestPlayerData;
-	//9999 cutText ["Received Player Info", "BLACK", 0.01];
 
 	waitUntil {!isNil "playerData_loaded"};
 
@@ -161,7 +154,6 @@ if (["A3W_survivalSystem"] call isConfigOn) then
 A3W_clientSetupComplete = compileFinal "true";
 
 [] spawn playerSpawn;
-[] spawn playerCustomUniform;
 
 A3W_scriptThreads pushBack execVM "addons\fpsFix\vehicleManager.sqf";
 A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";

@@ -3,24 +3,26 @@
 // ******************************************************************************************
 //	@file Name: createLegendMarkers.sqf
 //	@file Author: AgentRev
+//	@file blacked: GriffinZS
+
 
 _markers =
 [
-	["Legend:", "EmptyIcon", "ColorWhite", [1,1]],
+	["Legend:", "EmptyIcon", "ColorBlack", [1,1]],
 
-	["GS - General Store", "mil_dot", "ColorBlue", [1,1]],
-	["VS - Vehicle Store", "mil_dot", "ColorOrange", [1,1]]
+	["GS - General Store", "mil_dot", "ColorBlack", [1,1]],
+	["VS - Vehicle Store", "mil_dot", "ColorBlack", [1,1]]
 ];
 
 
 if (["A3W_privateParking"] call isConfigOn) then
 {
-	_markers pushBack ["Parking", "mil_dot", "ColorCIV", [1,1]];
+	_markers pushBack ["Parking", "mil_dot", "ColorBlack", [1,1]];
 };
 
 if (["A3W_privateStorage"] call isConfigOn) then
 {
-	_markers pushBack ["Storage", "mil_dot", "ColorUNKNOWN", [1,1]];
+	_markers pushBack ["Storage", "mil_dot", "ColorBlack", [1,1]];
 };
 
 _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "mapSize");

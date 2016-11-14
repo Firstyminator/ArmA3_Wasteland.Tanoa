@@ -43,13 +43,13 @@ mf_compile = compileFinal
 		if (_isDebug) then {
 			compile format ["call compile preProcessFileLineNumbers ""%1""", _path]
 		} else {
-			compileFinal preProcessFileLineNumbers _path;
+			compileFinal preProcessFileLineNumbers _path
 		};
 	} else {
 		if (_isDebug) then {
 			compile toString _code
 		} else {
-			compileFinal toString _code;
+			compileFinal toString _code
 		};
 	};
 ');
@@ -79,7 +79,7 @@ A3W_fnc_pushVehicle = [_serverFunc, "pushVehicle.sqf"] call mf_compile;
 A3W_fnc_setVehicleLoadout = [_serverFunc, "fn_setVehicleLoadout.sqf"] call mf_compile;
 A3W_fnc_setupServiceVehicle = [_serverFunc, "fn_setupServiceVehicle.sqf"] call mf_compile;
 A3W_fnc_towingHelper = [_serverFunc, "towingHelper.sqf"] call mf_compile;
-A3W_fnc_hideObjectGlobal = "addons\aj\aj_serverfunctions\fn_aj_s_hideObjectGlobal.sqf" call mf_compile;    // Added for base door open/close
+A3W_fnc_hideObjectGlobal = "addons\scripts\fn_aj_s_hideObjectGlobal.sqf" call mf_compile;    // Added for base door open/close
 applyVehicleTexture = "client\systems\vehicleStore\applyVehicleTexture.sqf" call mf_compile;
 cargoToPairs = [_serverFunc, "cargoToPairs.sqf"] call mf_compile;
 detachTowedObject = [_serverFunc, "detachTowedObject.sqf"] call mf_compile;
@@ -140,7 +140,6 @@ vehicleDammagedEvent = [_serverFunc, "vehicleDammagedEvent.sqf"] call mf_compile
 vehicleEngineEvent = [_serverFunc, "vehicleEngineEvent.sqf"] call mf_compile;
 vehicleHandleDamage = [_serverFunc, "vehicleHandleDamage.sqf"] call mf_compile;
 vehicleHitTracking = [_serverFunc, "vehicleHitTracking.sqf"] call mf_compile;
-// A3W_fnc_aj_s_refreshZeus = "addons\aj\zeus\fn_aj_s_refreshZeus.sqf" call mf_compile;  //name has has to started with A3W_fnc_ 
 
 call compile preprocessFileLineNumbers "server\functions\mf_remote.sqf";
 
