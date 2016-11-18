@@ -1037,8 +1037,8 @@ landArray = compileFinal str
 	["Tempest Covered", "O_Truck_03_covered_F", 7500, "vehicle"],
 	["Tempest Fuel", "O_Truck_03_fuel_F", 9000, "vehicle"],
 	["Tempest Medical", "O_Truck_03_medical_F", 10000, "vehicle"],
-	//["Tempest Repair", "O_Truck_03_repair_F", 12500, "vehicle"],			//Removed to avoid bugusing with default arma rearm/repair function
-	//["Tempest Resupply", "O_Truck_03_ammo_F", 12500, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
+	["Tempest Repair", "O_Truck_03_repair_F", 35500, "vehicle"],			//Removed to avoid bugusing with default arma rearm/repair function
+	["Tempest Resupply", "O_Truck_03_ammo_F", 65500, "vehicle"],				//Removed to avoid bugusing with default arma rearm/repair function
 	
 	["Zamak Transport", "I_Truck_02_transport_F", 4000, "vehicle"],
 	["Zamak Covered", "I_Truck_02_covered_F", 5000, "vehicle"],
@@ -1393,7 +1393,6 @@ customPlayerItems = compileFinal str
 	//["Water Bottle", "water", localize "STR_WL_ShopDescriptions_Water", "client\icons\waterbottle.paa", 30, 15],
 	//["Canned Food", "cannedfood", localize "STR_WL_ShopDescriptions_CanFood", "client\icons\cannedfood.paa", 30, 15],
 	["Repair Kit", "repairkit", localize "STR_WL_ShopDescriptions_RepairKit", "client\icons\briefcase.paa", 500, 250],
-
 	["LSD", "lsd", localize "STR_WL_ShopDescriptions_LSD", "client\icons\lsd.paa", 12500, 6250],
 	["Marijuana", "marijuana", localize "STR_WL_ShopDescriptions_Marijuana", "client\icons\marijuana.paa", 10000, 5000],
 	["Cocaine", "cocaine", localize "STR_WL_ShopDescriptions_Cocaine", "client\icons\cocaine.paa", 14000, 7000],
