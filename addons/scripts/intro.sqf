@@ -1,6 +1,8 @@
 /*
-    Author: Firsty
-    Copyright by Firsty (C) 2016
+	intro.sqf | A simple intro script with some music and text - moviestyle! yo!
+	
+    Author: Firsty (C) 2016
+
 */
 
 // Triggers the audio "class CfgMusic" from description.ext
@@ -30,7 +32,7 @@ private ["_messages", "_timeout"];
 
 _messages = [
 	["Welcome to Tanoa", (name player)],
-	["", "This is a beautiful place... or atleast it was.."],
+	["", "This is a beautiful place... or atleast it was.. once.."],
 	["", "War raged for years, leaving the surrounding islands with only scattered military materials and weapons.."],
 	["", "Now it's up to you to gain control of the island.. but beware, there are others like you out there.."],
 	["", "Take great care, behave, build and survive! This is Wasteland!"]
