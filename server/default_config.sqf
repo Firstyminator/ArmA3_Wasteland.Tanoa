@@ -41,7 +41,7 @@ A3W_maxLockonDistance = 1000; 	// Max Lockon Distance with Missle
 APOC_coolDownTimer = 900;		// APOC Air Drop Cool Down Time
 BoS_coolDownTimer = 900;           // Baselocker hacking timer
 Safe_coolDownTimer = 900;          // Safe hacking timer
-A3W_maxSpawnBeacons = 2;		   // Maxmimum number of spawn beacons (0 = disabled)
+A3W_maxSpawnBeacons = 3;		   // Maxmimum number of spawn beacons (0 = disabled)
 
 // Antihack settings
 A3W_antiHackUnitCheck = 1;         // Detect players who spawn unauthorized AI units (0 = no, 1 = yes) - disable if you have custom unit scripts/mods like AI recruitment or ALiVE
@@ -133,7 +133,7 @@ A3W_boatSpawning = 1;              // If serverSpawning = 1, spawn boats at mark
 A3W_heliSpawning = 1;              // If serverSpawning = 1, spawn helicopters in some towns and airfields (0 = no, 1 = yes)
 A3W_planeSpawning = 0;             // If serverSpawning = 1, spawn planes at some airfields (0 = no, 1 = yes)
 A3W_boxSpawning = 1;               // If serverSpawning = 1, spawn weapon crates in 50% towns (0 = no, 1 = yes)
-A3W_baseBuilding = 0;              // If serverSpawning = 1, spawn base parts in towns (0 = no, 1 = yes)
+A3W_baseBuilding = 1;              // If serverSpawning = 1, spawn base parts in towns (0 = no, 1 = yes)
 A3W_essentialsSpawning = 0;        // If serverSpawning = 1, spawn essential items (food sacks, water barrels, minor supply crates) in towns (0 = no, 1 = yes)
 
 // Loot settings
@@ -162,7 +162,7 @@ A3W_hackedMissionPercentage = 0.008; // Percentage to come out of bankaccounts
 A3W_hackedMissionExtraFixMoney = 30000;	// Fix extra money for successfully download
 
 //Settings concerning Thermal Vision
-A3W_enableTILimitations = 0;     // Globally enable the Thermal Vision limitions underneath (if set to 0 the settings underneath are not applied)
+A3W_enableTILimitations = 1;     // Globally enable the Thermal Vision limitions underneath (if set to 0 the settings underneath are not applied)
 A3W_disableTIforAll = 1; 		// Disable Thermal Vision for Everything
 A3W_disableTIforLaunchers = 1;  // Disable Thermal Vision when using Launchers
 A3W_disableTIforDrones = 1;     // Disable Thermal Vision when using Drones
