@@ -99,8 +99,8 @@ if (hasInterface || isServer) then
 {
 	//init 3rd Party Scripts
 	[] execVM "addons\statusBar\statusbar.sqf";
-	//[] execVM "addons\parking\functions.sqf";
-	//[] execVM "addons\storage\functions.sqf";
+	[] execVM "addons\parking\functions.sqf";
+	[] execVM "addons\storage\functions.sqf";
 	[] execVM "addons\module_cleanup\init.sqf";
 	[] execVM "addons\scripts\intro.sqf";                 // Welcome intro by Firsty
 	[] execVM "addons\vactions\functions.sqf";
