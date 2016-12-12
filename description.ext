@@ -69,7 +69,7 @@ briefing = 0; // if 0, skip Continue button
 #include "addons\proving_ground\PG_config.hpp"
 #include "addons\outlw_magrepack\config.hpp"
 #include "addons\gui\gui.hpp"
-#include "addons\parking\list_simple_menu.hpp"
+//#include "addons\parking\list_simple_menu.hpp"
 #include "addons\CHVD\dialog.hpp"
 #include "addons\beacondetector\sound\cfgsounds.hpp"
 #include "client\systems\hud\dialog\downloadData.hpp"
