@@ -16,6 +16,6 @@ _player addRating 9999999;
 [] execVM "addons\Door\init.sqf";    // Door script
 [] execVM "addons\vPin\init.sqf";    // Vehicle Pinlock script
 
-_player groupChat "Found all my stuff...lucky.. now i can continue!";
+_player groupChat "Allright! I'm good to go!";
 sleep 4;
 playerSetupComplete = true;

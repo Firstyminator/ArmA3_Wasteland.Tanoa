@@ -114,6 +114,6 @@ weaponInfo = "client\systems\gunStore\weaponInfo.sqf" call mf_compile;
 if (isNil "A3W_fnc_MP") then { A3W_fnc_MP = compile preprocessFileLineNumbers "\A3\functions_f\MP\fn_MP.sqf" };
 if (isNil "A3W_fnc_MPexec") then { A3W_fnc_MPexec = compile preprocessFileLineNumbers "\A3\functions_f\MP\fn_MPexec.sqf" };
 
-player groupChat "Looking for my stuff.. where did i put it..";
+player groupChat "Looking through the database for your stuff!";
 sleep 6;
 playerCompiledScripts = true;
