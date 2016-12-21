@@ -8,7 +8,7 @@ if (_eng) then {
 	_vehicle vehicleChat format ["Stop engine in 15s to sell vehicle. You will get 3/4 of the vehicle store price."];
 	sleep 15;
 	_eng = isengineon _vehicle;
-	if (_eng) exitWith {_vehicle vehicleChat format ["Engine still running. Deal CANCELED!"];};
+	if (_eng) exitWith {_vehicle vehicleChat format ["Engine still running. Deal CANCELLED!"];};
 };
 
 
