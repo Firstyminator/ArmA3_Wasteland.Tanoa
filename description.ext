@@ -13,7 +13,7 @@ corpseRemovalMaxTime = 30*60; //Maximal time in seconds after which a dead body 
 wreckManagerMode = 1;   //Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
 wreckRemovalMinTime = 5*60;  //Minimal time in seconds a wreck stays in the scene (can't be removed sooner). 
 wreckRemovalMaxTime = 10*60; //Maximal time in seconds after which a wreck is removed (can't stay longer)
-enableDebugConsole = 1;
+enableDebugConsole = 0;
 respawnDialog = 0; // do not enable this, otherwise the default scoreboard will overlap with the new one
 onPauseScript = "client\clientEvents\onPause.sqf";
 class Header
@@ -24,9 +24,9 @@ class Header
 };
 
 author="Firsty - Core by A3Wasteland.com";
-onLoadName = "A3Wasteland Norway Tanoa"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+onLoadName = "A3Wasteland NoEliteGaming Tanoa"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 onLoadMission = "A3Wasteland.com";
-overviewText = "Website: noelite.no Facebook: NoEliteGaming";
+overviewText = "Website: www.noelite.no Facebook: NoEliteGaming";
 overviewTextLocked = "";
 overviewPicture = "mapConfig\loading.jpg";
 loadScreen = "mapConfig\loading.jpg";
