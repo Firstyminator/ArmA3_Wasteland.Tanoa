@@ -10,19 +10,19 @@ _markers =
 [
 	["Legend:", "EmptyIcon", "ColorBlack", [1,1]],
 
-	["GS - General Store", "mil_dot", "ColorBlack", [1,1]],
-	["VS - Vehicle Store", "mil_dot", "ColorBlack", [1,1]]
+	["General Store", "mil_dot", "ColorYellow", [1,1]],
+	["Vehicle Store", "mil_dot", "ColorOrange", [1,1]]
 ];
 
 
 if (["A3W_privateParking"] call isConfigOn) then
 {
-	_markers pushBack ["Parking", "mil_dot", "ColorBlack", [1,1]];
+	_markers pushBack ["Parking", "mil_dot", "ColorBlue", [1,1]];
 };
 
 if (["A3W_privateStorage"] call isConfigOn) then
 {
-	_markers pushBack ["Storage", "mil_dot", "ColorBlack", [1,1]];
+	_markers pushBack ["Storage", "mil_dot", "ColorYellow", [1,1]];
 };
 
 _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "mapSize");
