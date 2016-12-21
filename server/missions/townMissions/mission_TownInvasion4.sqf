@@ -47,6 +47,8 @@ _setupObjects =
 	// create some atmosphere around the crates 8)
 	_tent1 = createVehicle ["B_MRAP_01_F", _missionPos, [], 3, "None"];
 	_tent1 setDir random 360;
+	
+		
 	_chair1 = createVehicle ["MetalBarrel_burning_F", _missionPos, [], 2, "None"];
 	_chair1 setDir random 90;
 	_chair2 = createVehicle ["Flag_Syndikat_F", _missionPos, [], 2, "None"];

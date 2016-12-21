@@ -14,7 +14,7 @@
 	["Land_BagBunker_01_small_green_F", [4.52393, 6.37305, 0.0791397], 179.5],
 	["Box_IND_WpsSpecial_F", [-1.04126, 0.24707, 0], 286.415, { [_this, ["mission_USSpecial", "mission_DLCLMGs"] call BIS_fnc_selectRandom] call fn_refillbox }],
 	["Land_HBarrier_01_line_5_green_F", [-6.46558, 2.6377, 0.0582647], 90.8417],
-	["Land_IRMaskingCover_02_F", [0, 0, -0.00534153], 0.243539],
+	["CamoNet_OPFOR_open_F", [0, 0, -0.00534153], 0.243539],
 	["Box_East_WpsSpecial_F", [0.470947, -0.591309, 0], 85.8074, { [_this, "mission_USLaunchers"] call fn_refillbox }],
 	["Land_Ancient_Wall_8m_F", [-7.76196, 2.66602, 0.0108471], 270.574],
 	["Land_HBarrier_01_line_5_green_F", [5.80786, 2.78027, 0.100734], 269.176],

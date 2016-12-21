@@ -24,7 +24,7 @@ _setupObjects =
 	_wreckPos = _missionPos vectorAdd ([[25 + random 20, 0, 0], random 360] call BIS_fnc_rotateVector2D);
 
 	// Class, Position, Fuel, Ammo, Damage, Special
-	_wreck = ["B_T_VTOL_01_infantry_F", _wreckPos, 0, 0, 1] call createMissionVehicle;
+	_wreck = ["O_T_VTOL_02_vehicle_F", _wreckPos, 0, 0, 1] call createMissionVehicle;
 
 	_box1 = createVehicle ["Box_NATO_WpsSpecial_F", _missionPos, [], 5, "None"];
 	_box1 setDir random 360;
@@ -38,9 +38,10 @@ _setupObjects =
 
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup, _missionPos, _nbUnits] call createCustomGroup;
-
+	
+	
 	_missionPicture = getText (configFile >> "CfgVehicles" >> typeOf _wreck >> "picture");
-	_missionHintText = "A Blackfish has come down under enemy fire!";
+	_missionHintText = "A Y-32 Xi'an has come down under enemy fire!";
 };
 
 _waitUntilMarkerPos = nil;
@@ -59,7 +60,7 @@ _successExec =
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 	deleteVehicle _wreck;
 
-	_successHintMessage = "The Blackfish supplies have been collected, well done.";
+	_successHintMessage = "The Y-32 Xi'an supplies have been collected, well done.";
 };
 
 _this call sideMissionProcessor;

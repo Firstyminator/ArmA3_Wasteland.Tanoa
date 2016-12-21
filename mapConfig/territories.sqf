@@ -12,6 +12,7 @@
 // 4 - Territory category, currently unused. See territory/README.md for details.
 
 [
+	["TERRITORY_IPOTA", "Ipota / Hotel Resort", 500],
 	["TERRITORY_YANUKKA", "Yannukka", 500],
 	["TERRITORY_KATKOULA", "Katkoula", 500],
 	["TERRITORY_RAUTAKE", "Rautake", 500],
@@ -24,6 +25,8 @@
 	["TERRITORY_HARCOURT", "Harcourt", 500],
 	["TERRITORY_DOODSTIL", "Doodstil", 500],
 	["TERRITORY_KOTOMO", "Kotomo", 500],
+	["TERRITORY_NICOLET_PETIT", "Petit Nicolet", 500],
+	["TERRITORY_BLERICK", "Blerick", 500],
 	["TERRITORY_LAMI", "Lami", 500],
 	["TERRITORY_LIFOU", "Lifou", 500],
 	["TERRITORY_REGINA", "Regina", 500],

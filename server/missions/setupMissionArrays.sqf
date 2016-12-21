@@ -42,7 +42,6 @@ TransportMissions =
 	["mission_IS", 1]
 	
 	
-	
 ];
 
 
@@ -81,6 +80,8 @@ AirMissions =
 SpecialMissions =
 [
 	// Mission filename, weight
+	["mission_Roulette", 1],
+	["mission_falsecops", 1],
 	["mission_Falcon", 1],
 	["mission_StomperSOS", 1],
 	["mission_HostageRescue", 1],

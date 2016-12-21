@@ -14,7 +14,7 @@ private ["_convoyVeh", "_veh1", "_veh2", "_createVehicle", "_vehicles", "_leader
 
 _setupVars =
 {
-	_missionType = "Meth Transport";
+	_missionType = "Cops on Cocaine";
 	_locationsArray = nil;
 };
 
@@ -26,11 +26,11 @@ _setupObjects =
 	// pick the vehicles for the convoy
 	_convoyVeh = if (missionDifficultyHard) then
 	{
-		["O_T_LSV_02_armed_F"]
+		["B_G_Offroad_01_armed_F"]
 	}
 	else
 	{
-		["O_T_LSV_02_armed_F"]
+		["B_G_Offroad_01_armed_F"]
 	};
 
 	_veh1 = _convoyVeh select 0;
@@ -50,20 +50,23 @@ _setupObjects =
 		_vehicle setDir _direction;
 		_aiGroup addVehicle _vehicle;
 
-		_soldier = [_aiGroup, _position] call createRandomSoldier;
+		_soldier = [_aiGroup, _position] call createRandomCop;
 		_soldier moveInDriver _vehicle;
 
-		_soldier = [_aiGroup, _position] call createRandomSoldier;
+		_soldier = [_aiGroup, _position] call createRandomCop;
 		_soldier moveInCargo [_vehicle, 0];
+		
+		_soldier = [_aiGroup, _position] call createRandomCop;
+		_soldier moveInTurret [_vehicle, [1]];
 		
 		_vehicle addEventhandler ["HandleDamage", {0.75*(_this select 2)}];
 		_vehicle addEventhandler ["HandleDamage", {if (_this select 1 in ["wheel_1_1_steering","wheel_1_2_steering","wheel_2_1_steering","wheel_2_2_steering"]) then {0*(_this select 2)}}];
 
 		switch (true) do
 		{
-			case (_type isKindOf "C_SUV_01_F"):
+			case (_type isKindOf "B_G_Offroad_01_armed_F"):
 			{
-				[_vehicle, "#(rgb,1,1,1)color(0.01,0.01,0.01,1)", [0]] call applyVehicleTexture; // Apply black color
+				[_vehicle, "mapConfig\img\gendarmerie_offroad.paa", [0]] call applyVehicleTexture; 
 			};
 		};
 
@@ -110,7 +113,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _veh1 >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 
-	_missionHintText = format ["Rumors say, a <t color='%2'>%1</t> transporting lots of <t color='%2'>Crystal Meth</t>. Stop this car and kill these bastard!", _vehicleName, transportMissionColor];
+	_missionHintText = format ["Gendarmerie patrolmen try big business: driving around in a <t color='%2'>%1</t>, selling <t color='%2'>Cocaine</t>.<br/>Find their route, stop the car and kill these scumbags!", _vehicleName, transportMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -145,22 +148,22 @@ _drop_item =
 _successExec =
 {
 	// Mission completed
-	_drugpilerandomizer = [2,4,6];
+	_drugpilerandomizer = [5,8,10];
 	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
 	
 	for "_i" from 1 to _drugpile do 
 	{
 	  private["_item"];
 	  _item = [
-	          ["meth", "Land_HeatPack_F"],
-	          ["meth", "Land_HeatPack_F"],
-	          ["meth", "Land_HeatPack_F"],
-	          ["meth", "Land_HeatPack_F"]
+	          ["cocaine", "Land_PowderedMilk_F"],
+	          ["cocaine", "Land_PowderedMilk_F"],
+	          ["cocaine", "Land_PowderedMilk_F"],
+	          ["cocaine", "Land_PowderedMilk_F"]
 	        ] call BIS_fnc_selectRandom;
 	  [_item, _lastPos] call _drop_item;
 	};
 	
-	_successHintMessage = "Good job! The Meth Transport has been stopped! Collect the Meth and .. sell or use it. It's all yours!";
+	_successHintMessage = "Well done! The so called business men payed a high price. Keep the Cocaine - for your efforts.";
 };
 
 _this call transportMissionProcessor;

@@ -7,6 +7,7 @@
 private _towns =
 [
 	// Marker Name, Diameter, City Name
+	["Town_Ipota", -1, "Ipota / Hotel Resort"],
 	["Town_Balavu", -1, "Balavu"],
 	["Town_Belfort", -1, "Belfort"],
 	["Town_BluePearl", -1, "Blue Pearl Port"],
@@ -35,6 +36,8 @@ private _towns =
 	["Town_Tuvanaka", -1, "Tuvanaka"],
 	["Town_Vagalala", -1, "Vagalala"],
 	["Town_RedSpring_Slum", -1, "Red Spring Slums"],
+	["Town_Nicolet_Petit", -1, "Petit Nicolet"],
+	["Town_Blerick", -1, "Blerick"],
 	["Town_Yanukka", -1, "Yanukka"]
 ];
 
