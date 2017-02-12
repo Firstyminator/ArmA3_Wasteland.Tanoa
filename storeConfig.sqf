@@ -3,7 +3,7 @@
 // ******************************************************************************************
 /*********************************************************#
 # @@ScriptName: storeConfig.sqf
-# @@Author: His_Shadow, AgentRev, Armajunkies, Firsty
+# @@Author: His_Shadow, AgentRev, Armajunkies, Firstyminator
 # @@Create Date: 2013-09-16 20:40:58
 #*********************************************************/
 
@@ -893,7 +893,6 @@ genObjectsArray = compileFinal str
 	["Flag (UNO)", "Flag_UNO_F", 500, "object"],
 	["Flag (USA)", "Flag_US_F", 500, "object"],
 	["Flag (UK)", "Flag_UK_F", 500, "object"],
-	["Flag (NOELITE)", "FlagPole_F", 500, "object"],
 	["---BASE EQUIPMENT---", "none", 0, "object"],
 	["Base Locker Lite(PIN: 0000)", "Land_Laptop_unfolded_F", 40000, "object"],
 	["Base Door", "Land_Canal_WallSmall_10m_F", 10000, "object"],
