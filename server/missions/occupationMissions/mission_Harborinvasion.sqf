@@ -53,7 +53,7 @@ _setupObjects =
 	
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _smugglerVeh >> "picture");
 	
-	_missionHintText = format ["<br/>Some faggots entered one of the local harbor. <br/>Kill them all, destroy the vehicles and have a look at their cargo!", occupationMissionColor];
+	_missionHintText = format ["<br/>Some sea-looters entered one of the local harbor. <br/>Kill them all, destroy the vehicles and have a look at their cargo!", occupationMissionColor];
 };
 	
 _waitUntilMarkerPos = nil;

@@ -12,7 +12,7 @@ private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_createVehicle","
 
 _setupVars =
 {
-	_missionType = "Strider's Path";
+	_missionType = "Strider Convoy";
 	_locationsArray = nil;
 };
 

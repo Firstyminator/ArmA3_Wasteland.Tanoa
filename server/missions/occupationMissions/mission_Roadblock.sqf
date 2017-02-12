@@ -11,7 +11,7 @@ private [ "_box1", "_barGate", "_obj1","_obj2"];
 
 _setupVars =
 {
-	_missionType = "Roadblock";
+	_missionType = "Potato Roadblock";
 	_locationsArray = RoadblockMissionMarkers;
 };
 
@@ -32,7 +32,7 @@ _setupObjects =
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup,_missionPos,12,15] spawn createCustomGroup;
 	
-	_missionHintText = format ["<br/>Paramilitary units set up an illegal roadblock!<br/>Kill these morons and clear the way!", occupationMissionColor];
+	_missionHintText = format ["<br/>The PotatoSquad has set up an illegal roadblock on a public Tanoa road!<br/>Kill these morons and clear the way!", occupationMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
@@ -59,7 +59,7 @@ _successExec =
 	{ deleteVehicle _x } forEach [_barGate, _obj1, _obj2];
 	
 
-	_successHintMessage = format ["Excellent! The roadblock has been destroyed!"];
+	_successHintMessage = format ["Excellent! The idiots has been killed!"];
 };
 
 _this call occupationMissionProcessor;

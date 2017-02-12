@@ -11,7 +11,7 @@ private ["_positions", "_camonet", "_hostage", "_obj1", "_obj3", "_obj4", "_vehi
 
 _setupVars =
 {
-	_missionType = "High Tech Engineer";
+	_missionType = "Captured Engineer";
 	_locationsArray = MissionSpawnMarkers;
 };
 
@@ -58,7 +58,7 @@ _setupObjects =
 	_aiGroup setBehaviour "COMBAT";	
 	
 	
-	_missionHintText = format ["<br/>An engineer of high technology has been kidnapped by hostiles!<br/> Free this engineer and get some of his high value concepts!", specialMissionColor];
+	_missionHintText = format ["<br/>An technology engineer has been kidnapped by terrorists!<br/> Free the engineer and get retrieve his intel!", specialMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
@@ -70,7 +70,7 @@ _failedExec =
 	// Mission failed
 	
 	{ deleteVehicle _x } forEach [_camonet, _obj1, _obj3, _obj4, _hostage, _chair];
-	_failedHintMessage = format ["<br/>The engineer is dead! Well done. Really."];
+	_failedHintMessage = format ["<br/>The engineer was killed. Debrief!"];
 };
 
 _successExec =
@@ -109,7 +109,7 @@ _successExec =
 		uiSleep 0.1;
 	};
 	
-	_successHintMessage = format ["<br/>Well done! You saved the life of the engineer of high technology. Keep his concepts and use them in fight."];
+	_successHintMessage = format ["<br/>Well done! You managed to rescue the engineer."];
 };
 
 _this call specialMissionProcessor;

@@ -14,7 +14,7 @@ private ["_nbUnits", "_vehicleClass", "_vehicle"];
 
 _setupVars =
 {
-	_missionType = "Petrol Blockade";
+	_missionType = "Gas Theft";
 	_locationsArray = GasstationMissionMarkers;
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 };
@@ -46,7 +46,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _vehicleClass >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleClass >> "displayName");
 
-	_missionHintText = format ["<br/>Few armed units using a <t color='%2'>%1</t> to steal petrol from marked gas station.<br/>Rumors say, they want to <t color='%2'>detonate the gas station</t> later ..", _vehicleName, occupationMissionColor];
+	_missionHintText = format ["<br/>Some armed units using a <t color='%2'>%1</t> is trying to steal petrol from a gas station.<br/>Rumors say, they want to <t color='%2'>detonate the gas station</t> later ..", _vehicleName, occupationMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
@@ -66,7 +66,7 @@ _successExec =
 	_vehicle lock 1;
 	_vehicle setVariable ["R3F_LOG_disabled", false, true];
 
-	_successHintMessage = "Well done! Free petrol for all again!";
+	_successHintMessage = "Well done! Gas theft was prevented!";
 };
 
 _this call occupationMissionProcessor;

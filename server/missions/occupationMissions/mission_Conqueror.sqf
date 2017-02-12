@@ -36,7 +36,7 @@ _setupObjects =
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup,_missionPos,10,15] spawn createCustomGroup;
 	
-	_missionHintText = format ["<br/>Reportedly armed units try to <br/><t color='%1'>conquer a small island</t>.<br/>Check this island, find the invaders and kick them back to the sea!", occupationMissionColor];
+	_missionHintText = format ["<br/>Reportedly armed units try to <br/><t color='%1'>conquer a small island</t>.<br/>Investigate this island, find the invaders and kick them back to the sea!", occupationMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
