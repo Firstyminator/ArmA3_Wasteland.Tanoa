@@ -15,7 +15,7 @@ private ["_vehChoices", "_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle
 
 _setupVars =
 {
-	_missionType = "Hollywood Jetski";
+	_missionType = "Jetski Jackasses";
 	_locationsArray = CoastalConvoyPaths;
 };
 
@@ -118,7 +118,7 @@ _setupObjects =
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh2 >> "displayName");
 
-	_missionHintText = format ["Two wannabe stars with <t color='%3'>%1</t> try their newbie stunts near the coast. A <t color='%3'>%2</t> escorts and records them.<br/>Kill these bastards! It's Tanoa, not fucking Hollywood!", _vehicleName, _vehicleName2, waterMissionColor];
+	_missionHintText = format ["Two loonietoons with <t color='%3'>%1</t> try their stunts near the coast. A <t color='%3'>%2</t> escorts and records them.<br/>Kill these bastards! It's Tanoa, not fucking Hollywood!", _vehicleName, _vehicleName2, waterMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };

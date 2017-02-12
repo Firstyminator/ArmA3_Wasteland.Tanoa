@@ -12,7 +12,7 @@ private ["_vehicles","_createVehicle","_veh1","_convoyVeh","_explosive","_explos
 
 _setupVars =
 {
-	_missionType = "Suicide Squad";
+	_missionType = "Terrorists";
 	_nbUnits = if (missionDifficultyHard) then { AI_GROUP_LARGE } else { AI_GROUP_MEDIUM };
 
 	// settings for this mission
@@ -100,7 +100,7 @@ _setupObjects =
 	// move them into buildings
 	[_aiGroup, _missionPos, _buildingRadius, _fillEvenly, _putOnRoof] call moveIntoBuildings;
 
-	_missionHintText = format ["<br/>The so called Suicide Squad has taken over <br/><t size='1.25' color='%1'>%2</t>.<br/><t color='%1'>%3 of these wankers</t> are lurking in that area. Eliminate them all, claim their cash and drugs stash and clear the area!", townMissionColor, _townName, _nbUnits];
+	_missionHintText = format ["<br/>Terrorists has taken over <br/><t size='1.25' color='%1'>%2</t>.<br/><t color='%1'>%3 of these highly trained men</t> are lurking in the area. Eliminate them all, claim their cash and drugs stash and clear the area!", townMissionColor, _townName, _nbUnits];
 };
 
 _waitUntilMarkerPos = nil;

@@ -14,7 +14,7 @@ private ["_convoyVeh", "_veh1", "_veh2", "_createVehicle", "_vehicles", "_leader
 
 _setupVars =
 {
-	_missionType = "Helldrugs";
+	_missionType = "Drug Smugglers Heli";
 	_locationsArray = nil;
 };
 
@@ -107,7 +107,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _veh1 >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 
-	_missionHintText = format ["Be aware! A <t color='%2'>%1</t> has been spotted, transporting lots of drugs! Stop this, <t color='%2'>before</t> it arrives final destination", _vehicleName, transportMissionColor];
+	_missionHintText = format ["Be aware! A <t color='%2'>%1</t> has been spotted, transporting lots of drugs! Stop it, <t color='%2'>before</t> it arrives final destination", _vehicleName, transportMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };

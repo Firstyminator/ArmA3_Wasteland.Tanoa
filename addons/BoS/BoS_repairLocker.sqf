@@ -39,10 +39,11 @@ _success = [_totalDuration, "AinvPknlMstpSlayWrflDnon_medic", _checks, [cursorTa
 if (_success) then
 {
 	private["_reLockers", "_repair"];
-	_reLockers = nearestObjects [player, ["Land_Device_assembled_F"], 5];
+	_reLockers = nearestObjects [player, ["Land_Laptop_unfolded_F"], 5];
 	_repair = _reLockers select 0;
 	_repair setDamage 0;
 	["Base Re-Locker is Repaired.", 5] call mf_notify_client;
+
 };
 
 mutexScriptInProgress = false;

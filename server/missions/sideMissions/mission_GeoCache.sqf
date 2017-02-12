@@ -13,7 +13,7 @@ private ["_geoPos", "_geoCache", "_randomBox", "_randomCase", "_box1", "_para"];
 
 _setupVars =
 {
-	_missionType = "Radio Hideout";
+	_missionType = "GeoCache";
 	_locationsArray = MissionSpawnMarkers;
 };
 
@@ -21,9 +21,9 @@ _setupObjects =
 {
 	_missionPos = markerPos _missionLocation;
 	_geoPos = _missionPos vectorAdd ([[25 + random 20, 0, 0], random 360] call BIS_fnc_rotateVector2D);	
-	_geoCache = createVehicle ["Land_SurvivalRadio_F",[(_geoPos select 0), (_geoPos select 1),0],[], 0, "NONE"];
+	_geoCache = createVehicle ["Land_SatellitePhone_F",[(_geoPos select 0), (_geoPos select 1),0],[], 0, "NONE"];
 
-	_missionHintText = "<br/>There is a small object hidden near the marker. Find it and a reward will be delivered by air!<br/>Right. It's a bloody hidden radio!";
+	_missionHintText = "<br/>There is a small object hidden near the marker. Find it and a reward will be delivered by air!<br/>Right. What can it be?";
 };
 
 _ignoreAiDeaths = true;

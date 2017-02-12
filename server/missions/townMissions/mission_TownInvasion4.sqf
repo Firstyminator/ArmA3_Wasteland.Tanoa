@@ -46,9 +46,7 @@ _setupObjects =
 
 	// create some atmosphere around the crates 8)
 	_tent1 = createVehicle ["B_MRAP_01_F", _missionPos, [], 3, "None"];
-	_tent1 setDir random 360;
-	
-		
+	_tent1 setDir random 360;	
 	_chair1 = createVehicle ["MetalBarrel_burning_F", _missionPos, [], 2, "None"];
 	_chair1 setDir random 90;
 	_chair2 = createVehicle ["Flag_Syndikat_F", _missionPos, [], 2, "None"];
@@ -64,8 +62,7 @@ _setupObjects =
 
 	// move them into buildings
 	[_aiGroup, _missionPos, _buildingRadius, _fillEvenly, _putOnRoof] call moveIntoBuildings;
-
-		
+	
 	_missionHintText = format ["<br/>A <t color='%1'>Hunter</t> has been immobilized in or near <t color='%1'>%2</t>! <t color='%1'>%3 armed units</t> just arrived there to save the vehicle. <br/>Kill them all, save the cargo and try to get the Hunter!", townMissionColor, _townName, _nbUnits];
 };
 

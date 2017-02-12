@@ -12,7 +12,7 @@ private ["_planeChoices", "_convoyVeh", "_veh1", "_veh2", "_createVehicle", "_ve
 
 _setupVars =
 {
-	_missionType = "Dead Sky";
+	_missionType = "Hostile Fighters";
 	_locationsArray = nil;
 };
 
@@ -108,7 +108,7 @@ _setupObjects =
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh2 >> "displayName");
 
-	_missionHintText = format ["Two <t color='%3'>%1</t> have been spotted! <br/>Bring them down and save their fucking cargo!", _vehicleName, _vehicleName2, airMissionColor];
+	_missionHintText = format ["Two <t color='%3'>%1</t> have been spotted! <br/>Bring them down and take their cargo!", _vehicleName, _vehicleName2, airMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };

@@ -14,7 +14,7 @@ private ["_convoyVeh", "_veh1", "_veh2", "_createVehicle", "_vehicles", "_leader
 
 _setupVars =
 {
-	_missionType = "Cops on Cocaine";
+	_missionType = "Cocaine Dealers";
 	_locationsArray = nil;
 };
 
@@ -113,7 +113,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _veh1 >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 
-	_missionHintText = format ["Gendarmerie patrolmen try big business: driving around in a <t color='%2'>%1</t>, selling <t color='%2'>Cocaine</t>.<br/>Find their route, stop the car and kill these scumbags!", _vehicleName, transportMissionColor];
+	_missionHintText = format ["Gendarmerie patrolmen try big business: driving around in a <t color='%2'>%1</t>, selling <t color='%2'>Cocaine</t>.<br/>Find their route, stop the car and kill them!", _vehicleName, transportMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };

@@ -25,7 +25,8 @@
 	"Lamps_base_F",
 	"PowerLines_base_F",
 	"PowerLines_Small_base_F",
-	"Land_Device_assembled_F"
+	"Land_Device_assembled_F",
+	"Land_Laptop_unfolded_F"
 ], 30];
 
 hint "Lights OFF";

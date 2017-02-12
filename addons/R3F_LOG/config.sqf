@@ -331,6 +331,7 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 [
 	// e.g. : "MyLiftableObjectClassName1", "MyLiftableObjectClassName2"
 	"Land_Device_assembled_F", // Base Locker
+	"Land_Laptop_unfolded_F", // Base Locker
 	"Hatchback_01_base_F",
 	"SUV_01_base_F",
 	"Offroad_01_base_F",
@@ -439,6 +440,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Static_Designator_01_base_F", 2],
 	["Static_Designator_02_base_F", 2],
 	["Land_Device_assembled_F", 100],   //Base Locker
+	["Land_Laptop_unfolded_F", 10],   //Base Locker
     ["Box_GEN_Equip_F", 10],            //Safe
     ["Land_PillboxWall_01_6m_F", 10],   //Base Door
     ["Land_TripodScreen_01_dual_v1_F", 5],         //Base Door Key
@@ -581,6 +583,7 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Static_Designator_01_base_F",
 	"Static_Designator_02_base_F",
 	"Land_Device_assembled_F",          //Re Locker
+	"Land_Laptop_unfolded_F",           //Base Locker
     "Box_GEN_Equip_F",                  //Safe
     "Land_PillboxWall_01_6m_F",         //Base Door
     "Land_TripodScreen_01_dual_v1_F",   //Base Door Key

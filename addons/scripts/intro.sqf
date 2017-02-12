@@ -31,14 +31,17 @@
 private ["_messages", "_timeout"];
 
 _messages = [
-	["Welcome to Tanoa", (name player)],
-	["", "This is a beautiful place... or atleast it was.. once.."],
-	["", "War raged for years, leaving the surrounding islands with only scattered military materials and weapons.."],
-	["", "Now it's up to you to gain control of the island.. but beware, there are others like you out there.."],
-	["", "Take great care, behave, build and survive! This is Wasteland!"]
+	["2017!! The year of joy", (name player)],
+	["", "Simple rules will follow:"],
+	["", "You hack, exploit or cheat - you get cancer"],
+	["", "Please report all sorts of hacking/abuse/troll directly to an admin online (Firsty, GreensKeeper or Asbonia) or to admin@noelite(dot)no"],
+	["", "You fuck around with anyones base or hack as above, you also get banned permanently besides the cancer."],
+	["", "Have fun! And don't stay up too late!"],
+	["", "This is a friendly server.. not a hardcore PvP, you're looking for that, go play GrandTheftAuto"],
+	["", "Eeeveryones happy :) Take care! And see you on the flipside! -Firsty"]
 ];
 
-_timeout = 8;
+_timeout = 5;
 {
 	private ["_title", "_content", "_titleText"];
 	uiSleep 2;
