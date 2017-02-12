@@ -109,7 +109,7 @@ while {true} do
 	
 	//NoElite Ad
 	//_serverString = format ["<t color='#A0FFFFFF'>Server: [NO] Wasteland #1 Norway Tanoa</t>"];
-    _serverString = format ["<t color='#A0FFFFFF'>NoEliteGaming Wasteland Tanoa</t>"];
+    _serverString = format ["<t color='#A0FFFFFF'>NoElitePotato Wasteland Tanoa</t>"];
 	_serverString = format ["<t color='#A0FFFFFF'><br/>Website: noelite.no</t><br/><t color='#A0FFFFFF'>Facebook: NoEliteGaming</t>",_serverString];
 	_hudServerTextbox ctrlSetStructuredText parseText _serverString;
 	_hudServerTextbox ctrlCommit 0;

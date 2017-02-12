@@ -1,6 +1,6 @@
 //	@file Version: 2.0
 //	@file Name: HvT.sqf
-//	@file Author: Cael817, CRE4MPIE, LouD, AgentRev. Edit by Firsty.
+//	@file Author: Cael817, CRE4MPIE, LouD, AgentRev. Edit by Firstyminator.
 
 #define HVT_AMOUNT 60000  // how much a player needs to be carrying to become a HvT
 #define HINT_DELAY 180  // number of seconds between each HvT reminder hint

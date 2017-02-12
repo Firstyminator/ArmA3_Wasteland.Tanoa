@@ -23,10 +23,10 @@ class Header
 	maxPlayers=42; // 144 players, 2 headless client
 };
 
-author="Firsty - Core by A3Wasteland.com";
-onLoadName = "A3Wasteland NoEliteGaming Tanoa"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+author="Firstyminator - Core by A3Wasteland.com";
+onLoadName = "A3Wasteland Tanoa"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 onLoadMission = "A3Wasteland.com";
-overviewText = "Website: www.noelite.no Facebook: NoEliteGaming";
+overviewText = "Contact us: www.noelite.no";
 overviewTextLocked = "";
 overviewPicture = "mapConfig\loading.jpg";
 loadScreen = "mapConfig\loading.jpg";

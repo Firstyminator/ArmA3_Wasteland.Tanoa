@@ -1,7 +1,7 @@
 /*
 	intro.sqf | A simple intro script with some music and text - moviestyle! yo!
 	
-    Author: Firsty (C) 2016
+    Author: Firstyminator (C) 2017
 
 */
 
@@ -12,13 +12,13 @@
 // Loading text on black background
 	titleCut ["", "BLACK FADED", 999];
 [] Spawn {
-	titleText ["_noelite_gaming_presents_","PLAIN"];
+	titleText ["_noelite_gaming_and_the_potatosquad_presents_","PLAIN"];
 	titleFadeOut 3;
 	sleep 3;
 	titleText ["_a_a3_wasteland_tanoa_edition_","PLAIN"];
 	titleFadeOut 3;
 	sleep 3;
-	titleText ["_by_firsty_","PLAIN"];
+	titleText ["_by_firstyminator_","PLAIN"];
 	titleFadeOut 3;
 	sleep 3;
 	titleText ["_www.noelite.no_","PLAIN"];
@@ -33,12 +33,12 @@ private ["_messages", "_timeout"];
 _messages = [
 	["2017!! The year of joy", (name player)],
 	["", "Simple rules will follow:"],
-	["", "You hack, exploit or cheat - you get cancer"],
-	["", "Please report all sorts of hacking/abuse/troll directly to an admin online (Firsty, GreensKeeper or Asbonia) or to admin@noelite(dot)no"],
-	["", "You fuck around with anyones base or hack as above, you also get banned permanently besides the cancer."],
+	["", "You hack, exploit or cheat - you get potatoed"],
+	["", "Please report all sorts of hacking/abuse/troll directly to an admin online (Firstyminator, GreensKeeper) or to admin@noelite(dot)no"],
+	["", "You fuck around with anyones base or hack as above, you also get banned permanently besides the potatoing."],
 	["", "Have fun! And don't stay up too late!"],
 	["", "This is a friendly server.. not a hardcore PvP, you're looking for that, go play GrandTheftAuto"],
-	["", "Eeeveryones happy :) Take care! And see you on the flipside! -Firsty"]
+	["", "Eeeveryones happy :) Take care! And see you on the flipside! -Firstyminator"]
 ];
 
 _timeout = 5;

@@ -154,7 +154,7 @@ player createDiaryRecord ["credits",
 <br/>	* wiking.at (A3W forums)
 <br/>	* xx-LSD-xx (Armaholic)
 <br/>	* Zenophon (BIS Forums)
-<br/>	* Firsty (NoEliteGaming)
+<br/>	* Firstyminator (NoEliteGaming & PotatoSquad)
 <br/>
 <br/><font size='16'>Thanks A LOT to everyone involved for the help and inspiration!</font>
 "
